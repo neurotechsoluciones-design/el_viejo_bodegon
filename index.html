@@ -382,8 +382,8 @@
     <p>Formulario de relevamiento para terminar de calibrar el bot de atenci&oacute;n por WhatsApp. Complet&aacute; lo que sepas y hac&eacute; clic en "Guardar" &mdash; queda compartido al instante, as&iacute; que si hay algo que no manej&aacute;s vos, se lo pod&eacute;s pasar a quien del equipo tenga ese dato con el mismo link.</p>
     <div class="header-meta">
       <span><span class="dot green"></span> 12 datos a revisar (1 con contradicción detectada)</span>
-      <span><span class="dot amber"></span> 4 preguntas puntuales pendientes</span>
-      <span><span class="dot" style="background:var(--blue)"></span> 12 barrios + 6 zonas a confirmar</span>
+      <span><span class="dot amber"></span> 5 definiciones puntuales pendientes</span>
+      <span><span class="dot" style="background:var(--blue)"></span> 12 barrios y sus l&iacute;mites a confirmar</span>
     </div>
   </header>
 
@@ -426,8 +426,18 @@
       </div>
     </div>
 
-    <div class="warn-callout red">
-      &#128274; <strong>Por qu&eacute; no hay un campo de contrase&ntilde;a ac&aacute; abajo:</strong> NeuroTech no pide ni guarda contrase&ntilde;as de cuentas de redes sociales, en ning&uacute;n formulario ni por ning&uacute;n canal. No es solo por cuidar tu cuenta &mdash; es la forma correcta de trabajar entre una empresa y su agencia, y es literalmente lo que Meta dise&ntilde;&oacute; para este caso. Te dejamos las dos formas de darnos acceso sin compartir ninguna clave.
+    <div class="warn-callout">
+      &#128196; <strong>Documentaci&oacute;n necesaria para la verificaci&oacute;n</strong><br>
+      Para continuar con la configuraci&oacute;n y verificaci&oacute;n de la empresa en Meta, necesitamos una copia legible y vigente de la <strong>Constancia de Inscripci&oacute;n de ARCA</strong> correspondiente a la raz&oacute;n social del negocio.<br><br>
+      La constancia deber&aacute; enviarse al equipo de NeuroTech por WhatsApp. No es necesario compartir la clave fiscal ni ninguna contrase&ntilde;a.
+    </div>
+
+    <div class="warn-callout">
+      &#8505;&#65039; <strong>Informaci&oacute;n sobre los costos de WhatsApp Business</strong><br>
+      A partir del <strong>1 de octubre de 2026</strong>, Meta implementar&aacute; cambios en el sistema de precios de la API oficial de WhatsApp Business.<br><br>
+      Estos cambios podr&iacute;an generar cargos por algunos mensajes enviados desde el bot, seg&uacute;n el tipo de conversaci&oacute;n, el volumen de uso y las tarifas que Meta establezca para Argentina.<br><br>
+      Por el momento, podemos continuar utilizando la API actual con normalidad. M&aacute;s adelante, cuando est&eacute;n disponibles los valores definitivos y podamos evaluar el uso real del bot, se podr&aacute; decidir si conviene mantener esta alternativa o analizar opciones con otros proveedores.<br><br>
+      NeuroTech acompa&ntilde;ar&aacute; este an&aacute;lisis para elegir la opci&oacute;n m&aacute;s conveniente seg&uacute;n el funcionamiento y las necesidades del negocio.
     </div>
 
     <div class="data-subgroup-title">&#9989; Opci&oacute;n 1 (recomendada) &mdash; Agregarnos como socio en Business Manager</div>
@@ -481,11 +491,12 @@
     </div>
 
     <div class="data-subgroup-title">&#128337; Horarios de cocina &mdash; cu&aacute;ndo el restaurante realmente atiende</div>
-    <div class="data-subgroup-desc">Esto es cu&aacute;ndo la cocina est&aacute; prendida y se puede comer ah&iacute; o pedir delivery &mdash; distinto de "hasta qu&eacute; hora se puede hacer un pedido nuevo por la web" (eso es el pr&oacute;ximo bloque).</div>
+    <div class="data-subgroup-desc">Esto indica cu&aacute;ndo la cocina est&aacute; atendiendo. <strong>Al mediod&iacute;a solo se puede consumir en el restaurante y no hay delivery.</strong> El bot debe ofrecer la Carta Mediod&iacute;a, informar los horarios e invitar al cliente a acercarse al local.</div>
     <div class="data-grid">
       <div class="data-item">
         <div class="key">Horario Carta Mediod&iacute;a</div>
         <div class="val">12:00 a 15:00 hs</div>
+        <div class="val" style="margin-top:8px;padding:10px 12px;background:var(--blue-bg);border-radius:8px;font-size:13px;color:var(--text-secondary)"><strong>Sin delivery:</strong> el bot ofrece la Carta Mediod&iacute;a y los horarios, y aclara que durante este turno la atenci&oacute;n es &uacute;nicamente para consumir en el restaurante.</div>
         <div class="verify-row">
           <label><input type="radio" name="conf_carta_mediodia" value="ok" id="conf_carta_mediodia_ok"> Est&aacute; bien</label>
           <label><input type="radio" name="conf_carta_mediodia" value="mal" id="conf_carta_mediodia_mal"> Hay que corregir</label>
@@ -533,15 +544,6 @@
         <input type="text" class="correccion-input" placeholder="Si hay que corregir, escrib&iacute; el valor correcto..." id="conf_tiempo_entrega_correccion">
       </div>
       <div class="data-item">
-        <div class="key">Sistema de pedidos</div>
-        <div class="val">OlaClick &mdash; carta con opcionales</div>
-        <div class="verify-row">
-          <label><input type="radio" name="conf_sistema_pedidos" value="ok" id="conf_sistema_pedidos_ok"> Est&aacute; bien</label>
-          <label><input type="radio" name="conf_sistema_pedidos" value="mal" id="conf_sistema_pedidos_mal"> Hay que corregir</label>
-        </div>
-        <input type="text" class="correccion-input" placeholder="Si hay que corregir, escrib&iacute; el valor correcto..." id="conf_sistema_pedidos_correccion">
-      </div>
-      <div class="data-item">
         <div class="key">Estados de pedido (OlaClick)</div>
         <div class="val">En proceso / Listo / En camino</div>
         <div class="verify-row">
@@ -549,15 +551,6 @@
           <label><input type="radio" name="conf_estados_pedido" value="mal" id="conf_estados_pedido_mal"> Hay que corregir</label>
         </div>
         <input type="text" class="correccion-input" placeholder="Si hay que corregir, escrib&iacute; el valor correcto..." id="conf_estados_pedido_correccion">
-      </div>
-      <div class="data-item">
-        <div class="key">API de OlaClick</div>
-        <div class="val">Ya entregada y conectada al bot &mdash; s&oacute;lo lectura de pedidos</div>
-        <div class="verify-row">
-          <label><input type="radio" name="conf_api_olaclick" value="ok" id="conf_api_olaclick_ok"> Est&aacute; bien</label>
-          <label><input type="radio" name="conf_api_olaclick" value="mal" id="conf_api_olaclick_mal"> Hay que corregir</label>
-        </div>
-        <input type="text" class="correccion-input" placeholder="Si hay que corregir, escrib&iacute; el valor correcto..." id="conf_api_olaclick_correccion">
       </div>
       <div class="data-item">
         <div class="key">Alias de Mercado Pago</div>
@@ -583,7 +576,7 @@
     <div class="data-grid">
       <div class="data-item">
         <div class="key">Google Sheet de especiales</div>
-        <div class="val">Ah&iacute; carga Gerencia los especiales y promos del d&iacute;a &mdash; el bot la consulta sola cuando un cliente pregunta por una oferta o plato especial, y responde con lo que est&eacute; cargado ah&iacute;.</div>
+        <div class="val">En esta planilla, el equipo de El Viejo Bodeg&oacute;n carga los especiales y promociones del d&iacute;a. El bot la consulta autom&aacute;ticamente cuando un cliente pregunta por una oferta o un plato especial y responde con la informaci&oacute;n registrada.</div>
         <div class="val" style="margin-top:8px;padding:10px 12px;background:var(--amber-bg);border-radius:8px;font-size:13px;color:var(--text-secondary)">&#9888;&#65039; Importante: esta planilla <strong>no se actualiza sola</strong> con OlaClick &mdash; si cambian un precio en OlaClick, hay que cambiarlo tambi&eacute;n ac&aacute; a mano, si no el bot puede informar un precio viejo.</div>
         <div class="verify-row">
           <label><input type="radio" name="conf_sheet_especiales" value="ok" id="conf_sheet_especiales_ok"> Est&aacute; bien</label>
@@ -603,13 +596,13 @@
     </div>
   </section>
 
-  <!-- ==================== 2. TABLA DE BARRIOS ==================== -->
+  <!-- ==================== 2. BARRIOS ACTUALES ==================== -->
   <section class="section" id="barrios">
     <div class="section-header">
       <div class="section-icon blue">&#127963;</div>
       <div>
-        <div class="section-title">Tabla de barrios con delivery real <span class="tag blue" style="margin-left:8px">DEL HISTORIAL</span></div>
-        <div class="section-sub">Barrios y loteos que aparecen en los pedidos reales del historial de WhatsApp de los &uacute;ltimos meses. Se cruzaron 578 pedidos con direcci&oacute;n. Algunos barrios muestran m&aacute;s de una tarifa distinta &mdash; puede ser variaci&oacute;n interna del loteo, aumento de precio o adicional de lluvia mezclado. <strong>Confirmar la tarifa vigente hoy para cada uno.</strong></div>
+        <div class="section-title">Barrios actuales con cobertura de delivery <span class="tag blue" style="margin-left:8px">INFORMATIVO</span></div>
+        <div class="section-sub">Este listado ya est&aacute; definido y se muestra a t&iacute;tulo informativo. Marc&aacute; el tilde de cada barrio solamente como control de revisi&oacute;n. No es necesario volver a definir la cobertura ni cargar tarifas en esta secci&oacute;n.</div>
       </div>
     </div>
 
@@ -619,241 +612,150 @@
           <tr>
             <th>#</th>
             <th>Barrio / Loteo</th>
-            <th>Tarifas vistas en historial</th>
-            <th>Tarifa vigente hoy</th>
-            <th>Zona (estimada)</th>
-            <th style="width:100px;text-align:center">Confirmado</th>
+            <th style="width:110px;text-align:center">Revisado</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
             <td class="td-barrio">Las Lavandas</td>
-            <td>$3.500 - $4.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_1_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="3000">$3.000</option>
-                <option value="3500">$3.500</option>
-                <option value="4000">$4.000</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 1</td>
-            <td class="td-status"><input type="checkbox" id="barrio_1_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_1_ok" aria-label="Revisado: Las Lavandas"></td>
           </tr>
           <tr>
             <td>2</td>
             <td class="td-barrio">La Cascada</td>
-            <td>$3.500</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_2_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="3000">$3.000</option>
-                <option value="3500">$3.500</option>
-                <option value="4000">$4.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 1</td>
-            <td class="td-status"><input type="checkbox" id="barrio_2_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_2_ok" aria-label="Revisado: La Cascada"></td>
           </tr>
           <tr>
             <td>3</td>
             <td class="td-barrio">Cortaderas de la Noria</td>
-            <td>$4.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_3_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="3500">$3.500</option>
-                <option value="4000">$4.000</option>
-                <option value="4500">$4.500</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 2</td>
-            <td class="td-status"><input type="checkbox" id="barrio_3_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_3_ok" aria-label="Revisado: Cortaderas de la Noria"></td>
           </tr>
           <tr>
             <td>4</td>
             <td class="td-barrio">Vi&ntilde;as del Sur</td>
-            <td>$4.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_4_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="3500">$3.500</option>
-                <option value="4000">$4.000</option>
-                <option value="4500">$4.500</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 2</td>
-            <td class="td-status"><input type="checkbox" id="barrio_4_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_4_ok" aria-label="Revisado: Viñas del Sur"></td>
           </tr>
           <tr>
             <td>5</td>
             <td class="td-barrio">Comisso</td>
-            <td>$4.000 - $5.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_5_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="4000">$4.000</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 2 / 3</td>
-            <td class="td-status"><input type="checkbox" id="barrio_5_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_5_ok" aria-label="Revisado: Comisso"></td>
           </tr>
           <tr>
             <td>6</td>
             <td class="td-barrio">Alto Las Paredes</td>
-            <td>$4.500</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_6_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="4000">$4.000</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 3</td>
-            <td class="td-status"><input type="checkbox" id="barrio_6_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_6_ok" aria-label="Revisado: Alto Las Paredes"></td>
           </tr>
           <tr>
             <td>7</td>
             <td class="td-barrio">Residencias El Cha&ntilde;aral</td>
-            <td>$4.500 - $5.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_7_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="4000">$4.000</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 3</td>
-            <td class="td-status"><input type="checkbox" id="barrio_7_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_7_ok" aria-label="Revisado: Residencias El Chañaral"></td>
           </tr>
           <tr>
             <td>8</td>
             <td class="td-barrio">TAC</td>
-            <td>$5.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_8_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="5500">$5.500</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 4</td>
-            <td class="td-status"><input type="checkbox" id="barrio_8_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_8_ok" aria-label="Revisado: TAC"></td>
           </tr>
           <tr>
             <td>9</td>
             <td class="td-barrio">Unimev</td>
-            <td>$5.000</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_9_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="5500">$5.500</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 4</td>
-            <td class="td-status"><input type="checkbox" id="barrio_9_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_9_ok" aria-label="Revisado: Unimev"></td>
           </tr>
           <tr>
             <td>10</td>
             <td class="td-barrio">Kennedy</td>
-            <td>$5.000 - $5.500</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_10_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="4500">$4.500</option>
-                <option value="5000">$5.000</option>
-                <option value="5500">$5.500</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 4 / 5</td>
-            <td class="td-status"><input type="checkbox" id="barrio_10_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_10_ok" aria-label="Revisado: Kennedy"></td>
           </tr>
           <tr>
             <td>11</td>
             <td class="td-barrio">Alberdi</td>
-            <td>$5.500</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_11_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="5000">$5.000</option>
-                <option value="5500">$5.500</option>
-                <option value="6000">$6.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 5</td>
-            <td class="td-status"><input type="checkbox" id="barrio_11_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_11_ok" aria-label="Revisado: Alberdi"></td>
           </tr>
           <tr>
             <td>12</td>
             <td class="td-barrio">Garbin</td>
-            <td>$5.500</td>
-            <td>
-              <select class="form-select" style="font-size:12px;padding:6px 10px" id="barrio_12_tarifa">
-                <option value="">Seleccionar...</option>
-                <option value="5000">$5.000</option>
-                <option value="5500">$5.500</option>
-                <option value="6000">$6.000</option>
-                <option value="otro">Otro</option>
-              </select>
-            </td>
-            <td>Zona 5</td>
-            <td class="td-status"><input type="checkbox" id="barrio_12_ok"></td>
+            <td class="td-status"><input type="checkbox" id="barrio_12_ok" aria-label="Revisado: Garbin"></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="form-group" style="margin-top:16px">
-      <label class="form-label">Barrios que no est&aacute;n en la lista y tambi&eacute;n hacen delivery</label>
-      <textarea class="form-textarea" placeholder="Ej: Barrio Tal, Zona Tal, $X.XXX..." id="barrios_extra" style="min-height:60px"></textarea>
+    <div class="pending-card" style="margin-top:20px;margin-bottom:0">
+      <div class="pc-header">
+        <span class="pc-num">?</span>
+        <span class="pc-title">&iquest;Hay otros barrios con cobertura de delivery que no est&eacute;n incluidos en la lista?</span>
+      </div>
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="barrios_otros" value="no" id="barrios_otros_no">
+          <div class="radio-option-content">
+            <div class="radio-option-title">No, la lista est&aacute; completa</div>
+          </div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="barrios_otros" value="si" id="barrios_otros_si">
+          <div class="radio-option-content">
+            <div class="radio-option-title">S&iacute;, hay otros barrios</div>
+          </div>
+        </label>
+      </div>
+      <textarea class="form-textarea" placeholder="Si hay otros, escrib&iacute; sus nombres ac&aacute;..." id="barrios_extra" style="min-height:70px;margin-top:12px"></textarea>
     </div>
   </section>
 
-  <!-- ==================== 3. TABLA DE 6 ZONAS ==================== -->
-  <section class="section" id="zonas">
+  <!-- ==================== 3. TARIFAS DE DELIVERY ==================== -->
+  <section class="section" id="tarifas-delivery">
     <div class="section-header">
       <div class="section-icon green">&#128666;</div>
       <div>
-        <div class="section-title">Tabla de zonas de env&iacute;o (6 zonas)</div>
-        <div class="section-sub">La tabla que usa el bot para cotizar pedidos tomados por WhatsApp. Pasada por la usuaria el 2026-07-20. <strong>Confirmar que sigue vigente.</strong></div>
+        <div class="section-title">C&aacute;lculo y actualizaci&oacute;n de las tarifas de delivery</div>
+        <div class="section-sub">Definici&oacute;n del circuito que debe seguir el bot cuando un pedido se toma manualmente por WhatsApp.</div>
       </div>
     </div>
 
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Zona</th><th>Distancia</th><th>Tarifa</th><th style="width:80px;text-align:center">Vigente</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Zona 1</td><td>Hasta 1 km</td><td>$3.000</td><td class="td-status"><input type="checkbox" id="zona_1_vigente" checked></td></tr>
-          <tr><td>Zona 2</td><td>1 - 2 km</td><td>$3.500</td><td class="td-status"><input type="checkbox" id="zona_2_vigente" checked></td></tr>
-          <tr><td>Zona 3</td><td>2 - 3 km</td><td>$4.000</td><td class="td-status"><input type="checkbox" id="zona_3_vigente" checked></td></tr>
-          <tr><td>Zona 4</td><td>3 - 4 km</td><td>$4.500</td><td class="td-status"><input type="checkbox" id="zona_4_vigente" checked></td></tr>
-          <tr><td>Zona 5</td><td>4 - 5 km</td><td>$5.000</td><td class="td-status"><input type="checkbox" id="zona_5_vigente" checked></td></tr>
-          <tr><td>Zona 6</td><td>5 - 5.5 km</td><td>$5.500</td><td class="td-status"><input type="checkbox" id="zona_6_vigente" checked></td></tr>
-        </tbody>
-      </table>
+    <div class="warn-callout">
+      &#8505;&#65039; Cuando un pedido se tome manualmente por WhatsApp, el bot consultar&aacute; la planilla de Google Sheets para informar al cliente un <strong>costo estimado de env&iacute;o</strong>. El bot debe aclarar que ese importe es aproximado.<br><br>
+      Una vez que el pedido sea cargado en OlaClick, el sistema calcular&aacute; autom&aacute;ticamente el <strong>costo definitivo del env&iacute;o</strong> seg&uacute;n la direcci&oacute;n ingresada. Para que la estimaci&oacute;n informada por WhatsApp sea lo m&aacute;s precisa posible, las tarifas de la planilla deben mantenerse actualizadas.
+    </div>
+
+    <div class="pending-card">
+      <div class="pc-header">
+        <span class="pc-num">1</span>
+        <span class="pc-title">&iquest;Cada cu&aacute;nto tiempo suelen cambiar las tarifas de delivery?</span>
+      </div>
+      <div class="pc-context">Cada vez que cambien las tarifas utilizadas por OlaClick, tambi&eacute;n deber&aacute;n actualizarse en Google Sheets para evitar diferencias importantes entre el valor estimado por WhatsApp y el costo definitivo.</div>
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="p_tarifas_frecuencia" value="mensualmente" id="p_tarifas_frecuencia_mensualmente">
+          <div class="radio-option-content"><div class="radio-option-title">Mensualmente</div></div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="p_tarifas_frecuencia" value="varios_meses" id="p_tarifas_frecuencia_varios_meses">
+          <div class="radio-option-content"><div class="radio-option-title">Cada varios meses</div></div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="p_tarifas_frecuencia" value="cuando_aumentan_costos" id="p_tarifas_frecuencia_costos">
+          <div class="radio-option-content"><div class="radio-option-title">Solo cuando aumentan los costos</div></div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="p_tarifas_frecuencia" value="sin_frecuencia" id="p_tarifas_frecuencia_sin_definir">
+          <div class="radio-option-content"><div class="radio-option-title">No tienen una frecuencia definida</div></div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="p_tarifas_frecuencia" value="otra" id="p_tarifas_frecuencia_otra_radio">
+          <div class="radio-option-content"><div class="radio-option-title">Otra frecuencia</div></div>
+        </label>
+      </div>
+      <input type="text" class="form-input" style="margin-top:12px" placeholder="Si elegiste otra frecuencia, detallala ac&aacute;..." id="p_tarifas_frecuencia_otro">
+    </div>
+
+    <div class="pending-card">
+      <div class="pc-header">
+        <span class="pc-num">2</span>
+        <span class="pc-title">Responsable de actualizar la planilla</span>
+      </div>
+      <div class="pc-context">Indic&aacute; qui&eacute;n deber&aacute; actualizar Google Sheets cada vez que cambien las tarifas en OlaClick.</div>
+      <input type="text" class="form-input" placeholder="Nombre de la persona o sector responsable..." id="p_tarifas_responsable">
     </div>
   </section>
 
@@ -862,8 +764,8 @@
     <div class="section-header">
       <div class="section-icon amber">&#9881;</div>
       <div>
-        <div class="section-title">Preguntas para resolver con Gerencia</div>
-        <div class="section-sub">Cuatro puntos que faltan para terminar de calibrar el bot. Si alguno no lo manej&aacute;s vos, dej&aacute;lo en blanco y export&aacute; el archivo para que lo complete quien s&iacute; lo sepa.</div>
+        <div class="section-title">Preguntas para resolver con el equipo de El Viejo Bodeg&oacute;n</div>
+        <div class="section-sub">Dos puntos que faltan para terminar de calibrar el bot. Si alguno no lo manej&aacute;s vos, dej&aacute;lo en blanco y guard&aacute; el formulario para que lo complete quien tenga ese dato.</div>
       </div>
     </div>
 
@@ -902,106 +804,28 @@
       </div>
     </div>
 
-    <!-- P2: Delivery / checkout mediodia -->
+    <!-- REGLA CONFIRMADA: MEDIODIA -->
+    <div class="pending-card" style="border-color:rgba(0,20,94,.22);background:var(--blue-bg)">
+      <div class="pc-header">
+        <span class="pc-num">&#10003;</span>
+        <span class="pc-title">Atenci&oacute;n al mediod&iacute;a &mdash; regla confirmada</span>
+      </div>
+      <div class="pc-context" style="margin-bottom:0"><strong>Al mediod&iacute;a no hay delivery.</strong> Durante ese turno, la atenci&oacute;n es &uacute;nicamente para consumir en el restaurante. Cuando una persona consulte, el bot debe ofrecer la <strong>Carta Mediod&iacute;a</strong>, informar los d&iacute;as y horarios de atenci&oacute;n e invitarla a acercarse al local. No debe calcular costos de env&iacute;o ni tomar pedidos de delivery para esa franja horaria.</div>
+    </div>
+
+
+    <!-- P3: Planilla Google Sheets -->
     <div class="pending-card">
       <div class="pc-header">
         <span class="pc-num">2</span>
-        <span class="pc-title">&iquest;Hay delivery al mediod&iacute;a?</span>
+        <span class="pc-title">Email del equipo de El Viejo Bodeg&oacute;n para editar la planilla de especiales</span>
       </div>
-      <div class="pc-context">Ac&aacute; estuvimos asumiendo que el mediod&iacute;a funciona igual que la noche (con delivery y una ventana de checkout online), pero puede ser que el turno mediod&iacute;a sea <strong>solo para comer en el local o retirar, sin delivery</strong>. Si es as&iacute;, no hay "corte de checkout" que preguntar &mdash; directamente el bot no debe ofrecer env&iacute;o al mediod&iacute;a, solo mostrar la Carta Mediod&iacute;a para que el cliente vea qu&eacute; hay y venga a comer o retire.</div>
-      <div class="radio-group">
-        <label class="radio-option">
-          <input type="radio" name="p_delivery_mediodia" value="no_hay" id="p_delivery_mediodia_no_hay">
-          <div class="radio-option-content">
-            <div class="radio-option-title">No hay delivery al mediod&iacute;a</div>
-            <div class="radio-option-desc">El mediod&iacute;a es solo para comer en el sal&oacute;n o retirar en el local. El bot, si preguntan por el mediod&iacute;a, debe ofrecer/linkear la Carta Mediod&iacute;a y aclarar que no hay env&iacute;o en ese turno &mdash; nunca calcular costo de env&iacute;o ni tomar un pedido de delivery para esa franja horaria.</div>
-          </div>
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="p_delivery_mediodia" value="si_hay" id="p_delivery_mediodia_si_hay">
-          <div class="radio-option-content">
-            <div class="radio-option-title">S&iacute; hay delivery al mediod&iacute;a</div>
-            <div class="radio-option-desc">Funciona igual que la noche, con env&iacute;o disponible. Si eleg&iacute;s esta opci&oacute;n, complet&aacute; abajo el corte de checkout correspondiente.</div>
-          </div>
-        </label>
-      </div>
-
-      <div class="form-group" style="margin-top:18px;margin-bottom:0">
-        <label class="form-label" style="font-size:13px">Si hay delivery al mediod&iacute;a &mdash; &iquest;hasta qu&eacute; hora se acepta un pedido nuevo por la web?</label>
-        <div class="radio-group">
-          <label class="radio-option">
-            <input type="radio" name="p_checkout" value="mismo" id="p_checkout_mismo">
-            <div class="radio-option-content">
-              <div class="radio-option-title">Misma regla relativa que la noche</div>
-              <div class="radio-option-desc">Ej: "hasta 15 min antes de que cierre la cocina de mediod&iacute;a" &rarr; corte 14:45 hs.</div>
-            </div>
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="p_checkout" value="distinto" id="p_checkout_distinto">
-            <div class="radio-option-content">
-              <div class="radio-option-title">Horario distinto &mdash; especificar</div>
-              <div class="radio-option-desc">El corte de checkout del mediod&iacute;a es diferente al de la noche.</div>
-            </div>
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="p_checkout" value="no_corte" id="p_checkout_no_corte">
-            <div class="radio-option-content">
-              <div class="radio-option-title">No hay corte formal, se acepta hasta el cierre de cocina</div>
-              <div class="radio-option-desc">Se aceptan pedidos hasta el cierre de cocina (15:00 hs) sin restricci&oacute;n adicional.</div>
-            </div>
-          </label>
-        </div>
-        <input type="text" class="form-input" style="margin-top:12px" placeholder="Si elegiste horario distinto, indic&aacute; el corte exacto (ej: 14:00 hs)..." id="p_checkout_otro">
-      </div>
-    </div>
-
-    <!-- P3: 5.5 km -->
-    <div class="pending-card">
-      <div class="pc-header">
-        <span class="pc-num">3</span>
-        <span class="pc-title">&iquest;Pasados los 5,5 km NO se hacen env&iacute;os?</span>
-      </div>
-      <div class="pc-context">La tabla de 6 zonas llega hasta 5,5 km (Zona 6). No est&aacute; claro si m&aacute;s all&aacute; de esa distancia simplemente no se entrega o si hay una pol&iacute;tica distinta (ej: recargo, solo retiro en local, etc.).</div>
-      <div class="radio-group">
-        <label class="radio-option">
-          <input type="radio" name="p_55" value="no_envio" id="p_55_no_envio">
-          <div class="radio-option-content">
-            <div class="radio-option-title">No se hace env&iacute;o m&aacute;s all&aacute; de 5,5 km</div>
-            <div class="radio-option-desc">El delivery tiene un radio m&aacute;ximo de 5,5 km. Fuera de eso, el cliente debe retirar en el local.</div>
-          </div>
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="p_55" value="recargo" id="p_55_recargo">
-          <div class="radio-option-content">
-            <div class="radio-option-title">Se hace con recargo a convenir</div>
-            <div class="radio-option-desc">Se puede coordinar env&iacute;o a mayor distancia pero la tarifa se acuerda por separado (no hay tabla).</div>
-          </div>
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="p_55" value="hay_extension" id="p_55_hay_extension">
-          <div class="radio-option-content">
-            <div class="radio-option-title">S&iacute; hay tabla extendida &mdash; especificar</div>
-            <div class="radio-option-desc">Hay zonas m&aacute;s all&aacute; de los 5,5 km que no est&aacute;n en la tabla actual.</div>
-          </div>
-        </label>
-      </div>
-      <div class="form-group" style="margin-top:12px;margin-bottom:0">
-        <input type="text" class="form-input" placeholder="Aclaraciones..." id="p_55_otro">
-      </div>
-    </div>
-
-    <!-- P4: Planilla Google Sheets -->
-    <div class="pending-card">
-      <div class="pc-header">
-        <span class="pc-num">4</span>
-        <span class="pc-title">Email de Gerencia para editar la planilla de especiales</span>
-      </div>
-      <div class="pc-context">La planilla Google Sheets "Viejo Bodeg&oacute;n - Especiales y Ofertas" ya est&aacute; creada, conectada al bot y funcionando &mdash; el bot la consulta cuando un cliente pregunta por una promo o plato especial. Hoy solo la puede editar NeuroTech. Con este email le damos permiso de edici&oacute;n a Gerencia para que pueda cargar los especiales del d&iacute;a sin depender de nosotros. <strong>Ojo:</strong> esta planilla no se sincroniza sola con OlaClick &mdash; si cambia un precio en OlaClick hay que actualizarlo tambi&eacute;n ac&aacute; a mano.</div>
+      <div class="pc-context">La planilla Google Sheets "Viejo Bodeg&oacute;n - Especiales y Ofertas" ya est&aacute; creada, conectada al bot y funcionando &mdash; el bot la consulta cuando un cliente pregunta por una promo o plato especial. Hoy solo la puede editar NeuroTech. Con este email le damos permiso de edici&oacute;n al equipo de El Viejo Bodeg&oacute;n para que pueda cargar los especiales del d&iacute;a sin depender de nosotros. <strong>Ojo:</strong> esta planilla no se sincroniza sola con OlaClick &mdash; si cambia un precio en OlaClick hay que actualizarlo tambi&eacute;n ac&aacute; a mano.</div>
       <div class="form-group" style="margin-bottom:0">
         <input type="email" class="form-input" placeholder="ej: gerencia@elviejobodegon.com" id="p_email_dueno">
         <div class="checkbox-group" style="margin-top:8px">
           <input type="checkbox" id="p_email_ya_compartido">
-          <label for="p_email_ya_compartido">Ya le compart&iacute; la planilla a Gerencia con este email</label>
+          <label for="p_email_ya_compartido">Ya le compart&iacute; la planilla al equipo de El Viejo Bodeg&oacute;n con este email</label>
         </div>
       </div>
     </div>
@@ -1159,21 +983,18 @@ function generarResumen() {
   const metaAccesoVal = metaAcceso ? metaAcceso.value : '[sin responder]';
   const metaAccesoDetalle = document.getElementById('p_meta_acceso_detalle').value || '';
 
-  const deliveryMediodia = document.querySelector('input[name="p_delivery_mediodia"]:checked');
-  const deliveryMediodiaVal = deliveryMediodia ? deliveryMediodia.value : '[sin responder]';
+  const frecuencia = document.querySelector('input[name="p_tarifas_frecuencia"]:checked');
+  const frecuenciaVal = frecuencia ? frecuencia.value : '[sin responder]';
+  const frecuenciaOtro = document.getElementById('p_tarifas_frecuencia_otro').value || '';
+  const responsableTarifas = document.getElementById('p_tarifas_responsable').value || '[no informado]';
 
-  const checkout = document.querySelector('input[name="p_checkout"]:checked');
-  const checkoutVal = checkout ? checkout.value : '[sin responder]';
-  const checkoutOtro = document.getElementById('p_checkout_otro').value || '';
-
-  const p55 = document.querySelector('input[name="p_55"]:checked');
-  const p55Val = p55 ? p55.value : '[sin responder]';
-  const p55Otro = document.getElementById('p_55_otro').value || '';
 
   const emailDueno = document.getElementById('p_email_dueno').value || '[no informado]';
   const emailCompartido = document.getElementById('p_email_ya_compartido').checked;
 
-  const barriosExtra = document.getElementById('barrios_extra').value || '(ninguno)';
+  const barriosOtros = document.querySelector('input[name="barrios_otros"]:checked');
+  const barriosOtrosVal = barriosOtros ? barriosOtros.value : '[sin responder]';
+  const barriosExtra = document.getElementById('barrios_extra').value || '(ninguno informado)';
   const notas = document.getElementById('notas_adicionales').value || '(sin notas)';
 
   const confItems = [
@@ -1182,9 +1003,7 @@ function generarResumen() {
     ['conf_sushi_dias', 'Sushi — Días'],
     ['conf_checkout_noche', 'Ventana checkout online (noche) ⚠️ REVISAR'],
     ['conf_tiempo_entrega', 'Tiempo estimado de entrega'],
-    ['conf_sistema_pedidos', 'Sistema de pedidos'],
     ['conf_estados_pedido', 'Estados de pedido (OlaClick)'],
-    ['conf_api_olaclick', 'API de OlaClick'],
     ['conf_alias_mp', 'Alias de Mercado Pago'],
     ['conf_promos_transferencia', 'Promociones NO aplican con transferencia'],
     ['conf_sheet_especiales', 'Google Sheet de especiales'],
@@ -1200,24 +1019,10 @@ function generarResumen() {
 
   const barriosChecks = document.querySelectorAll('#barrios table tbody tr');
   let barriosResumen = '';
-  const labels = ['Las Lavandas','La Cascada','Cortaderas de la Noria','Vi&ntilde;as del Sur','Comisso','Alto Las Paredes','Residencias El Cha&ntilde;aral','TAC','Unimev','Kennedy','Alberdi','Garbin'];
-  barriosChecks.forEach((tr,i) => {
-    const sel = tr.querySelector('select');
-    const chk = tr.querySelector('input[type="checkbox"]');
-    const label = labels[i] || 'Barrio #'+(i+1);
-    const tarifa = sel ? sel.value : '-';
-    const conf = chk ? (chk.checked ? 'S&iacute;' : 'No') : '-';
-    barriosResumen += `  ${i+1}. ${label} → Tarifa: $${tarifa} | Confirmado: ${conf}\n`;
-  });
-
-  const zonasChecks = document.querySelectorAll('#zonas table tbody tr');
-  let zonasResumen = '';
-  const zLabels = ['Hasta 1 km','1-2 km','2-3 km','3-4 km','4-5 km','5-5.5 km'];
-  const zPrices = ['3000','3500','4000','4500','5000','5500'];
-  zonasChecks.forEach((tr,i) => {
-    const chk = tr.querySelector('input[type="checkbox"]');
-    const conf = chk ? (chk.checked ? 'Vigente' : 'No vigente') : '-';
-    zonasResumen += `  Zona ${i+1} (${zLabels[i]}) — $${zPrices[i]} → ${conf}\n`;
+  barriosChecks.forEach((tr, i) => {
+    const label = tr.querySelector('.td-barrio')?.textContent.trim() || 'Barrio #' + (i + 1);
+    const revisado = tr.querySelector('input[type="checkbox"]')?.checked ? 'Revisado' : 'Pendiente de revisar';
+    barriosResumen += `  ${i + 1}. ${label} → ${revisado}\n`;
   });
 
   const resumen = `## Resumen del formulario — El Viejo Bodegón (bot WhatsApp)
@@ -1229,36 +1034,33 @@ Opción elegida: ${metaAccesoVal}${metaAccesoDetalle ? '\nDetalle: ' + metaAcces
 
 ### Revisión de datos ya confirmados
 ${confResumen}
+### Regla confirmada para el mediodía
+No hay delivery. El bot ofrece la Carta Mediodía, informa días y horarios, e invita al cliente a consumir en el restaurante.
+
+### Tarifas de delivery
+Cuando el pedido se toma manualmente por WhatsApp, el bot informa un costo estimado consultando Google Sheets. OlaClick calcula el costo definitivo al cargar el pedido.
+Frecuencia de cambio: ${frecuenciaVal}${frecuenciaOtro ? '\nDetalle: ' + frecuenciaOtro : ''}
+Responsable de actualizar Google Sheets: ${responsableTarifas}
+
 ### Preguntas pendientes
 
-**1. Tarifa de d&iacute;a de lluvia ($4.000)**
+**1. Tarifa de día de lluvia ($4.000)**
 Respuesta: ${lluviaVal}${lluviaOtro ? '\nDetalle: ' + lluviaOtro : ''}
 
-**2. ¿Hay delivery al mediodía?**
-Respuesta: ${deliveryMediodiaVal}
-Si hay delivery — corte de checkout: ${checkoutVal}${checkoutOtro ? '\nDetalle: ' + checkoutOtro : ''}
-
-**3. L&iacute;mite de 5,5 km**
-Respuesta: ${p55Val}${p55Otro ? '\nDetalle: ' + p55Otro : ''}
-
-**4. Email de Gerencia (planilla especiales)**
+**2. Email del equipo de El Viejo Bodegón (planilla especiales)**
 Email: ${emailDueno}
-Planilla compartida: ${emailCompartido ? 'S&iacute;' : 'No'}
+Planilla compartida: ${emailCompartido ? 'Sí' : 'No'}
 
-### Tabla de barrios (confirmaci&oacute;n de tarifas)
+### Barrios actuales con cobertura de delivery
 ${barriosResumen}
-
-### Tabla de zonas de env&iacute;o
-${zonasResumen}
-
-### Barrios adicionales
-${barriosExtra}
+### ¿Hay otros barrios con cobertura?
+Respuesta: ${barriosOtrosVal}${barriosExtra !== '(ninguno informado)' ? '\nBarrios informados: ' + barriosExtra : ''}
 
 ### Notas adicionales
 ${notas}
 
 ---
-*Generado autom&aacute;ticamente desde el formulario HTML — ${new Date().toLocaleDateString('es-AR')}*
+*Generado automáticamente desde el formulario HTML — ${new Date().toLocaleDateString('es-AR')}*
 `;
 
   navigator.clipboard.writeText(resumen).then(() => {
