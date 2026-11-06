@@ -61,7 +61,7 @@ h1{font:800 clamp(38px,6vw,68px)/1.04 Manrope,sans-serif;letter-spacing:-.055em;
 .btn-primary{background:var(--lime);color:var(--navy)}
 .btn-ghost{border:1px solid rgba(255,255,255,.32);color:#fff}
 main{padding:38px 0 70px}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-2px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-2px}
 .metric{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
 .metric strong{display:block;font:800 clamp(26px,3vw,36px)/1.1 Manrope,sans-serif;letter-spacing:-.05em;color:var(--navy)}
 .metric span{display:block;font-size:14px;color:var(--muted);font-weight:700;margin-top:8px}
@@ -112,7 +112,7 @@ h2{font:800 clamp(29px,4vw,43px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;
 .token-card{background:#fff;border:1px solid var(--line);border-radius:23px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .token-card strong{font:900 clamp(30px,4vw,42px) Manrope,sans-serif;color:var(--navy);letter-spacing:-.05em}
 .token-card p{margin:5px 0 0;color:var(--muted);font-size:16px}
-.token-label{color:var(--electric);font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.token-label{color:var(--electric);font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}\n.token-note{margin-top:48px;padding:15px 19px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.72);display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px}.token-note span{font-weight:700;color:var(--navy)}.token-note strong{font:800 21px Manrope,sans-serif;color:var(--navy)}.token-note small{font-size:13px;color:var(--muted)}
 .next{background:var(--navy);border-radius:26px;padding:30px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
 .next h2{color:#fff}
 .next p{color:#DCE5FF;font-size:17px;margin:0}
@@ -171,7 +171,7 @@ h2{font:800 clamp(29px,4vw,43px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;
  .notice{grid-template-columns:40px 1fr;padding:17px;gap:12px}
  .notice-icon{width:40px;height:40px}
  .notice p{font-size:16px}
- .token-card{align-items:flex-start;flex-direction:column;padding:20px}
+ .token-card{align-items:flex-start;flex-direction:column;padding:20px}.token-note{align-items:flex-start;gap:7px;flex-direction:column}
  .next{grid-template-columns:1fr;padding:23px;gap:20px}
  .control-panel{padding:22px}
  .control{padding:17px}
@@ -221,7 +221,6 @@ h2{font:800 clamp(29px,4vw,43px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;
     <div class="metric"><strong>01 OCT</strong><span>Inicio de operación</span></div>
     <div class="metric"><strong>4</strong><span>Sistemas conectados</span></div>
     <div class="metric"><strong>30 días</strong><span>De ajustes y evolución</span></div>
-    <div class="metric highlight"><strong>$40.000</strong><span>Consumo de tokens de IA · octubre</span></div>
   </section>
 
   <section class="section" id="integraciones">
@@ -233,7 +232,7 @@ h2{font:800 clamp(29px,4vw,43px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;
     <div class="integrations">
       <article class="integration">
         <div class="integration-top"><span class="integration-icon">WA</span><h3>WhatsApp</h3></div>
-        <p>Canal de atención con interpretación de mensajes, audios y archivos, y coordinación con el equipo.</p>
+        <p>Canal de atención con interpretación de mensajes y archivos, transcripción de audios y coordinación con el equipo.</p>
       </article>
       <article class="integration">
         <div class="integration-top"><span class="integration-icon">OC</span><h3>OlaClick</h3></div>
@@ -304,11 +303,11 @@ h2{font:800 clamp(29px,4vw,43px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;
       </details>
       <details class="event">
         <summary><span class="event-date">03 OCTUBRE</span><span class="event-title">Atención y estabilidad<span class="event-sub">Menos interferencias y más coordinación con el equipo.</span></span></summary>
-        <div class="event-content"><ul><li>Se evitó que el bot escriba a personas que nunca iniciaron una conversación.</li><li>Se incorporó una pausa automática ante respuestas repetitivas a otros bots, y se corrigió la detección de saludos automáticos y avisos de OlaClick.</li><li>Los chats marcados como <strong>sin-bot</strong> permanecen pausados. También se mejoró la identificación de contactos y la coordinación con la atención humana.</li><li>Se ajustó el comportamiento de lectura y escritura de mensajes y se incorporó el aviso de demora cuando el contador de sushi alcanza <strong>6 pedidos</strong>.</li></ul></div>
+        <div class="event-content"><ul><li>Se evitó que el bot escriba a personas que nunca iniciaron una conversación.</li><li>Al tercer mensaje consecutivo fuera de tema ante otro bot, se pausa y deja una nota para el equipo. También se corrigió la detección de saludos automáticos y avisos de OlaClick.</li><li>Los chats marcados como <strong>sin-bot</strong> permanecen pausados. También se mejoró la identificación de contactos y la coordinación con la atención humana.</li><li>Se ajustó el comportamiento de lectura y escritura de mensajes y se incorporó el aviso de demora cuando el contador de sushi alcanza <strong>6 pedidos</strong>.</li></ul></div>
       </details>
       <details class="event">
         <summary><span class="event-date">05 OCTUBRE</span><span class="event-title">Pagos y reglas comerciales<span class="event-sub">Seguimiento automático sin perder validación humana.</span></span></summary>
-        <div class="event-content"><ul><li>Se configuraron hasta <strong>dos recordatorios de pago</strong>, separados por 15 minutos, con pausa nocturna y exclusión de clientes que ya enviaron comprobante.</li><li>Se incorporó la etiqueta de pago pendiente y alertas internas ante diferencias de importe, destino o comprobantes repetidos.</li><li>Se conectó el cálculo del <strong>10% de descuento en efectivo</strong>, con redondeo al millar, y reglas para evitar acumular promociones.</li><li>Se estableció el control del mínimo de <strong>15 piezas de sushi</strong>, independiente del mínimo general que permite OlaClick.</li></ul></div>
+        <div class="event-content"><ul><li>Se configuraron hasta <strong>dos recordatorios de pago</strong>, separados por 15 minutos, con pausa entre la 1:00 y las 10:00 y exclusión de clientes que ya enviaron comprobante.</li><li>Se incorporó la etiqueta de pago pendiente y alertas internas ante diferencias de importe, destino o comprobantes repetidos. El equipo acredita el pago y confirma al cliente.</li><li>Se precisaron los medios de pago: efectivo, transferencia y tarjeta en una cuota, esta última solo para retiro o consumo en el local.</li><li>Se conectó el cálculo del <strong>10% de descuento en efectivo</strong>, con redondeo al millar. No se acumula con otras promociones ni con el beneficio de vino de regalo.</li><li>Se estableció el control del mínimo de <strong>15 piezas de sushi</strong>, independiente del mínimo general que permite OlaClick. También se actualizaron las reglas de salsa de soja: una porción cada 15 piezas.</li></ul></div>
       </details>
       <details class="event">
         <summary><span class="event-date">08–12 OCT</span><span class="event-title">Pedidos, pagos y reservas<span class="event-sub">Conexiones y criterios de atención más claros.</span></span></summary>
@@ -334,17 +333,7 @@ h2{font:800 clamp(29px,4vw,43px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;
     </div>
   </section>
 
-  <section class="section" id="consumo">
-    <div class="section-head">
-      <div class="kicker">05 · Uso de inteligencia artificial</div>
-      <h2>Transparencia sobre el consumo.</h2>
-      <p>El seguimiento del uso de IA permite observar el costo de procesamiento y trabajar en su optimización.</p>
-    </div>
-    <div class="token-card">
-      <div><div class="token-label">Consumo de tokens · Octubre 2026</div><strong>$40.000</strong><p>Corresponde al consumo de modelos de IA informado para el período.</p></div>
-      <span class="value-icon" style="width:58px;height:58px;font-size:25px;flex-basis:58px">AI</span>
-    </div>
-  </section>
+  <div class="token-note"><span>Consumo de tokens de IA · Octubre 2026</span><strong>$40.000</strong><small>Importe correspondiente al consumo de modelos de IA informado para el período.</small></div>
 
   <section class="section" id="proximo">
     <div class="next">
