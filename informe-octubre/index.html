@@ -300,7 +300,7 @@ h2 em{color:var(--electric);font-weight:400}
   <div class="evidence">
    <div class="evidence-card"><strong>4</strong><span>personas recibieron un saludo no solicitado antes de corregir ese comportamiento.</span></div>
    <div class="evidence-card"><strong>6+</strong><span>respuestas podía enviar el bot ante otro bot antes de incorporar la pausa.</span></div>
-   <div class="evidence-card"><strong>0</strong><span>resultados posteriores cuantificados informados hasta el cierre de octubre.</span></div>
+   <div class="evidence-card"><strong>S/D</strong><span>resultados posteriores cuantificados informados hasta el cierre de octubre.</span></div>
   </div>
   <div class="note"><strong>Cómo leer estos datos:</strong> los dos primeros describen situaciones detectadas antes de los ajustes, no resultados posteriores. Todavía no contamos con una medición comparable que permita afirmar cuánto bajaron los errores, cuánto tiempo se ahorró o cuántos pedidos adicionales se generaron.</div>
  </div>
@@ -456,6 +456,13 @@ h2 em{color:var(--electric);font-weight:400}
      <ul><li>Se reforzó la web como canal habitual: por WhatsApp el asistente explica dónde hacer el pedido y comparte el enlace, en lugar de anotar platos y armarlo por chat. Se mantiene la alternativa excepcional acordada para quien no pueda utilizar el canal digital.</li><li>El objetivo es evitar pedidos incompletos o con información dispersa en la conversación.</li><li>Si falta el barrio, el asistente pregunta una sola vez. Si la persona envía solo la calle o una ubicación, informa que el equipo confirmará el dato en lugar de insistir repetidamente.</li></ul>
      <h4>Promociones futuras</h4>
      <ul><li>Se detectó un caso con la promoción de ñoquis libres: estaba cargada para el 29/10, pero una consulta del 28/10 recibió una respuesta incorrecta porque el asistente solo reconocía promociones vigentes en la fecha consultada.</li><li>Se amplió la consulta a promociones que comienzan dentro de los próximos <strong>10 días</strong>.</li><li>Si una promoción no aparece en la información disponible, el asistente ya no debe negarla: avisa al equipo para verificarla.</li><li>Se crearon tres flujos para cubrir estos escenarios de promociones futuras.</li><li>La carga en la planilla sigue a cargo del restaurante: promoción activa = TRUE y fechas desde/hasta correctamente completadas.</li></ul>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">DURANTE OCTUBRE · SIN FECHA EXACTA</span><span class="event-title">Actualización de carta y producto fuera de menú</span><span class="event-summary">Se detectó que el asistente seguía informando un roll teriyaki que ya no estaba disponible.</span></span></summary>
+    <div class="event-body">
+     <ul><li>El menú había cambiado y la modificación no se había comunicado a NeuroTech, por lo que el asistente continuaba mencionando el roll teriyaki.</li><li>Se incorporó un flujo de aviso para que el equipo pueda intervenir cuando la información de un producto deba verificarse.</li><li>Para mantener la carta correcta, cada cambio de producto, precio o disponibilidad debe enviarse también por escrito. La pieza gráfica no reemplaza el dato textual: interpretar imágenes puede sumar costo y generar errores.</li></ul>
+     <div class="flag">La fecha exacta de detección no fue informada. Se conserva como observación transversal del mes, sin asignarle un día.</div>
     </div>
    </details>
    <details class="event">
