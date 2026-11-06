@@ -2,144 +2,232 @@
 <html lang="es-AR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#00145E">
-<meta name="description" content="El Viejo Bodegón. Informe breve de evolución del asistente inteligente de WhatsApp, octubre 2026.">
-<title>El Viejo Bodegón | Evolución tecnológica · NeuroTech</title>
+<meta name="description" content="Informe ejecutivo de evolución del asistente de IA de El Viejo Bodegón. Octubre 2026. NeuroTech Soluciones.">
+<title>El Viejo Bodegón | Informe ejecutivo · Octubre 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#00145E;--navy2:#07112F;--electric:#2100E5;--lime:#9AFF5F;--ink:#11131B;--muted:#60697A;--paper:#F7F8FA;--line:#E4E8EF;--white:#fff;--display:"Playfair Display",Georgia,serif;--ui:Manrope,Arial,sans-serif;--body:"DM Sans",Arial,sans-serif}
+:root{--blue:#00145E;--blue2:#071B70;--electric:#2100E5;--lime:#9AFF5F;--ink:#101522;--muted:#687184;--paper:#F6F8FB;--line:#E3E8F0;--white:#fff;--dark:#080D19;--display:"Playfair Display",Georgia,serif;--ui:Manrope,Arial,sans-serif;--body:"DM Sans",Arial,sans-serif}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:78px}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.top{position:sticky;top:0;z-index:20;background:rgba(0,20,94,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}
-.top-inner{width:min(1220px,calc(100% - 48px));height:68px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;font:900 15px/1 var(--ui);letter-spacing:.04em}
-.brand-mark{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(140deg,var(--electric),var(--lime));color:var(--navy);font:900 16px var(--ui);box-shadow:0 0 22px #9aff5f28}
-.brand small{display:block;margin-top:5px;color:#B9C5E3;font:700 8px/1.3 var(--body);letter-spacing:.13em}
-.nav{display:flex;gap:24px;align-items:center}
-.nav a{color:#E9EDFA;text-decoration:none;font:700 11px var(--ui);letter-spacing:.04em}
-.nav a:hover{color:var(--lime)}
-.nav-cta{border:1px solid #ffffff55;border-radius:99px;padding:10px 16px}
-.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
-.hero{background:radial-gradient(ellipse at 82% 24%,#2100e55c,transparent 35%),radial-gradient(ellipse at 10% 100%,#9aff5f20,transparent 33%),linear-gradient(120deg,#00145E 0%,#07112F 64%,#090D1B 100%);color:#fff;position:relative;overflow:hidden;padding:clamp(62px,8vw,112px) 0 70px}
-.hero:before{content:"";position:absolute;width:490px;height:490px;border:1px solid #9aff5f35;border-radius:50%;right:-160px;top:-245px;box-shadow:0 0 0 38px #9aff5f08,0 0 0 78px #9aff5f06}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
-.kicker{display:flex;align-items:center;gap:10px;color:var(--lime);font:800 10px/1.5 var(--ui);letter-spacing:.16em;text-transform:uppercase}
-.kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 13px var(--lime)}
-h1{font:500 clamp(43px,5.4vw,75px)/1.07 var(--display);letter-spacing:-.045em;margin:23px 0 20px;max-width:760px}
+button{font:inherit}
+.top{position:sticky;top:0;z-index:30;background:rgba(0,20,94,.97);backdrop-filter:blur(16px);border-bottom:1px solid #ffffff1c}
+.top-inner{width:min(1160px,calc(100% - 40px));height:66px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;text-decoration:none;min-width:0}
+.brand img{display:block;width:176px;height:auto;max-height:40px;object-fit:contain;object-position:left center}
+.top-note{font:800 9px/1.4 var(--ui);letter-spacing:.15em;text-transform:uppercase;color:#D6E0F8}
+.top-nav{display:flex;align-items:center;gap:22px}
+.top-nav a{font:800 10px var(--ui);letter-spacing:.03em;color:#E7EDFA;text-decoration:none}
+.top-nav a:hover{color:var(--lime)}
+.top-nav .top-cta{padding:9px 14px;border:1px solid #ffffff45;border-radius:99px}
+.progress{height:2px;background:#ffffff15}
+.progress span{display:block;width:0;height:100%;background:var(--lime);transition:width .12s linear}
+.wrap{width:min(1080px,calc(100% - 40px));margin-inline:auto}
+.chapter{scroll-margin-top:88px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 15%,#2100e54f,transparent 34%),radial-gradient(ellipse at 12% 92%,#9aff5f22,transparent 31%),linear-gradient(128deg,#00145E 0%,#07112F 66%,#080D19 100%);color:#fff;padding:clamp(48px,7vw,92px) 0 50px}
+.hero:before{content:"";position:absolute;width:460px;height:460px;right:-200px;top:-240px;border:1px solid #9aff5f42;border-radius:50%;box-shadow:0 0 0 35px #9aff5f08,0 0 0 76px #9aff5f06}
+.hero:after{content:"";position:absolute;width:300px;height:300px;left:-180px;bottom:-220px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 30px #ffffff06}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:42px;align-items:center}
+.kicker{display:flex;align-items:center;gap:9px;color:var(--lime);font:900 9px/1.5 var(--ui);letter-spacing:.16em;text-transform:uppercase}
+.kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px #9aff5f}
+h1{font:500 clamp(42px,5.4vw,72px)/1.06 var(--display);letter-spacing:-.047em;margin:20px 0 17px;max-width:690px}
 h1 em{color:var(--lime);font-weight:400}
-.hero-copy>p{max-width:610px;color:#E0E7F8;font-size:16px;line-height:1.8;margin:0}
-.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:27px}
-.pill{border:1px solid #ffffff38;background:#ffffff0c;border-radius:99px;padding:8px 13px;color:#F4F6FF;font:700 10px var(--ui);letter-spacing:.04em}
-.hero-links{display:flex;flex-wrap:wrap;gap:13px;margin-top:31px}
-.btn{min-height:48px;padding:12px 21px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font:800 12px var(--ui);transition:.2s}
-.btn-lime{background:var(--lime);color:var(--navy)}
-.btn-lime:hover{background:#fff;transform:translateY(-2px)}
-.btn-line{border:1px solid #ffffff55;color:#fff}
+.hero-copy>p{max-width:590px;color:#DDE5F8;font-size:15px;line-height:1.85;margin:0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff38;background:#ffffff0d;border-radius:99px;padding:7px 11px;color:#F2F5FF;font:800 9px var(--ui);letter-spacing:.03em}
+.pill i{width:6px;height:6px;border-radius:50%;background:var(--lime)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}
+.btn{min-height:45px;padding:11px 18px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:900 10px var(--ui);transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-lime{background:var(--lime);color:#06143B}
+.btn-lime:hover{background:#fff}
+.btn-line{border:1px solid #ffffff50;color:#fff}
 .btn-line:hover{border-color:var(--lime);color:var(--lime)}
-.visual{min-height:340px;display:grid;place-items:center;position:relative}
-.visual-orbit{position:absolute;width:min(310px,75vw);aspect-ratio:1;border:1px solid #9aff5f55;border-radius:50%;box-shadow:0 0 70px #2100e52e,inset 0 0 45px #2100e51e}
-.visual-orbit:before,.visual-orbit:after{content:"";position:absolute;inset:24px;border:1px solid #ffffff30;border-radius:50%}
-.visual-orbit:after{inset:57px;border-color:#9aff5f55}
-.phone{position:relative;z-index:1;width:230px;min-height:292px;border:1px solid #ffffff50;border-radius:28px;background:linear-gradient(155deg,#16285B,#080E24 75%);padding:17px;box-shadow:0 28px 70px #0008;transform:rotate(-4deg)}
-.phone-head{display:flex;align-items:center;justify-content:space-between;color:#fff;font:800 10px var(--ui);letter-spacing:.08em;padding-bottom:13px;border-bottom:1px solid #ffffff20}
-.online{color:var(--lime);font-size:9px}
-.chat{margin-top:13px;padding:11px 12px;border-radius:13px 13px 13px 3px;background:#ffffff13;color:#F5F7FF;font-size:10px;line-height:1.5;max-width:190px}
-.chat.reply{margin-left:auto;background:#9aff5f;color:#07112F;border-radius:13px 13px 3px 13px}
-.status{margin-top:13px;border:1px solid #9aff5f65;border-radius:11px;padding:10px;color:var(--lime);font:700 9px/1.5 var(--ui);display:flex;align-items:center;gap:8px}
-.status i{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 10px var(--lime)}
-.float-tag{position:absolute;z-index:2;border:1px solid #ffffff35;background:#0b1741ed;border-radius:12px;padding:11px 14px;color:#fff;font:800 10px var(--ui);box-shadow:0 14px 34px #0005}
-.float-tag b{display:block;color:var(--lime);font-size:15px;margin-bottom:2px}
-.tag-a{top:28px;left:0}.tag-b{bottom:22px;right:-5px}
-.ticker{background:var(--lime);color:var(--navy);overflow:hidden;white-space:nowrap}
-.ticker-inner{display:flex;justify-content:center;gap:clamp(20px,4vw,54px);padding:15px 20px;font:900 10px var(--ui);letter-spacing:.12em;text-transform:uppercase}
-.ticker span:after{content:"✳";margin-left:clamp(20px,4vw,54px);color:var(--electric)}
-.section{padding:clamp(55px,7vw,88px) 0}
-.section-head{display:grid;grid-template-columns:1fr .65fr;gap:45px;align-items:end;margin-bottom:32px}
-.overline{color:var(--electric);font:900 10px var(--ui);letter-spacing:.15em;text-transform:uppercase}
-h2{font:500 clamp(34px,4.4vw,57px)/1.13 var(--display);letter-spacing:-.04em;color:var(--navy);margin:12px 0 0}
+.hero-device{position:relative;min-height:320px;display:grid;place-items:center}
+.orbit{position:absolute;width:270px;aspect-ratio:1;border:1px solid #9aff5f60;border-radius:50%;box-shadow:0 0 65px #2100e52e,inset 0 0 35px #2100e51b}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:22px;border:1px solid #ffffff28;border-radius:50%}
+.orbit:after{inset:54px;border-color:#9aff5f55}
+.phone{position:relative;z-index:1;width:224px;padding:15px;border:1px solid #ffffff45;border-radius:27px;background:linear-gradient(155deg,#14234E,#080D19 72%);box-shadow:0 25px 65px #0008;transform:rotate(-3deg)}
+.phone-top{display:flex;align-items:center;justify-content:space-between;padding:0 1px 12px;border-bottom:1px solid #ffffff1e;color:#fff;font:900 9px var(--ui);letter-spacing:.07em}
+.online{color:var(--lime);font-size:8px}
+.msg{width:90%;margin-top:12px;padding:10px 11px;border-radius:12px 12px 12px 3px;background:#ffffff14;color:#F2F5FC;font-size:9px;line-height:1.5}
+.msg.reply{margin-left:auto;background:var(--lime);color:#07142F;border-radius:12px 12px 3px 12px}
+.phone-status{display:flex;align-items:center;gap:7px;margin-top:12px;padding:9px 10px;border:1px solid #9aff5f60;border-radius:10px;color:var(--lime);font:800 8px/1.4 var(--ui)}
+.phone-status i{width:6px;height:6px;background:var(--lime);border-radius:50%;box-shadow:0 0 9px var(--lime)}
+.device-label{position:absolute;z-index:2;padding:10px 12px;border:1px solid #ffffff30;border-radius:11px;background:#0A1538ed;box-shadow:0 12px 28px #0005;color:#fff;font:800 9px/1.4 var(--ui)}
+.device-label b{display:block;color:var(--lime);font-size:13px}
+.label-left{left:-3px;top:27px}.label-right{right:-3px;bottom:25px}
+.ribbon{background:var(--lime);color:var(--blue);overflow:hidden}
+.ribbon-inner{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 28px;padding:12px 18px;font:900 9px var(--ui);letter-spacing:.11em;text-transform:uppercase}
+.ribbon-inner span:after{content:"✳";margin-left:28px;color:var(--electric)}
+.section{padding:clamp(48px,6.5vw,78px) 0}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.7fr);gap:35px;align-items:end;margin-bottom:27px}
+.overline{color:var(--electric);font:900 9px var(--ui);letter-spacing:.16em;text-transform:uppercase}
+h2{font:500 clamp(34px,4.4vw,54px)/1.12 var(--display);letter-spacing:-.04em;color:var(--blue);margin:10px 0 0}
 h2 em{color:var(--electric);font-weight:400}
-.section-head p{margin:0;color:var(--muted);font-size:14px;line-height:1.85;max-width:470px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:22px 19px;min-height:210px;box-shadow:0 12px 30px #00145e08}
-.card-num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#EEF0FF;color:var(--electric);font:900 11px var(--ui)}
-.card h3{font:800 17px/1.25 var(--ui);color:var(--navy);margin:18px 0 9px}
-.card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
-.integrations{margin-top:23px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.integration{background:#EEF1F8;border:1px solid #E3E8F2;border-radius:12px;padding:13px 15px;display:flex;align-items:center;gap:10px}
-.integration b{font:900 11px var(--ui);color:var(--navy)}
-.integration span{font-size:10px;color:var(--muted)}
-.integration-mark{width:28px;height:28px;border-radius:8px;background:var(--navy);color:var(--lime);display:grid;place-items:center;font:900 9px var(--ui)}
-.dark-section{background:#07112F;color:#fff;position:relative;overflow:hidden}
-.dark-section:after{content:"";position:absolute;width:390px;height:390px;right:-160px;top:-190px;border:1px solid #9aff5f25;border-radius:50%;box-shadow:0 0 0 38px #9aff5f08,0 0 0 76px #9aff5f06}
-.cost-layout{position:relative;z-index:1;display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
-.cost-label{color:var(--lime);font:800 10px var(--ui);letter-spacing:.15em;text-transform:uppercase}
-.cost-number{font:800 clamp(54px,7vw,90px)/1 var(--ui);letter-spacing:-.08em;color:#fff;margin:15px 0 8px}
-.cost-caption{font:700 12px var(--ui);color:#C6D1EB}
-.cost-note{margin-top:19px;color:#AEBBD8;font-size:11px;line-height:1.7;max-width:330px}
-.cost-copy h2{color:#fff;margin:0 0 16px}
-.cost-copy h2 em{color:var(--lime)}
-.cost-copy>p{color:#D4DCF0;font-size:14px;line-height:1.8;max-width:600px}
-.optimizations{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
-.optimization{border:1px solid #ffffff25;background:#ffffff09;border-radius:13px;padding:14px}
-.optimization b{display:block;color:var(--lime);font:800 11px var(--ui);margin-bottom:6px}
-.optimization span{display:block;color:#D8E1F4;font-size:11px;line-height:1.55}
-.honesty{margin-top:16px;padding:13px 15px;border-left:2px solid var(--lime);background:#ffffff08;color:#D8E1F4;font-size:11px;line-height:1.65}
-.control-band{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}
-.control-band h3{font:500 29px/1.2 var(--display);color:var(--navy);margin:0}
-.control-band h3 em{color:var(--electric)}
-.control-list{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.control-item{border-left:2px solid var(--lime);padding-left:12px}
-.control-item b{display:block;color:var(--navy);font:800 11px var(--ui);margin-bottom:5px}
-.control-item span{display:block;color:var(--muted);font-size:11px;line-height:1.6}
-.timeline{margin-top:26px;border-top:1px solid var(--line);padding-top:22px}
-.timeline summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font:800 12px var(--ui);color:var(--navy);padding:4px 0}
-.timeline summary::-webkit-details-marker{display:none}
-.timeline summary:after{content:"+";font-size:22px;color:var(--electric)}
-.timeline[open] summary:after{content:"−"}
-.timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:17px}
-.milestone{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
-.milestone small{color:var(--electric);font:900 9px var(--ui);letter-spacing:.1em}
-.milestone b{display:block;color:var(--navy);font:800 13px var(--ui);margin:8px 0 6px}
-.milestone p{margin:0;color:var(--muted);font-size:11px;line-height:1.6}
-.keep{background:linear-gradient(120deg,#EAF0FF,#F8FAFC);border:1px solid #DDE5F4;border-radius:20px;padding:25px;display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:center}
-.keep h3{font:500 29px/1.2 var(--display);color:var(--navy);margin:0}
-.keep h3 em{color:var(--electric)}
-.keep-content p{font-size:12px;color:#4C5870;margin:0 0 10px;line-height:1.7}
-.keep-content p:last-child{margin:0}
-.keep strong{color:var(--navy)}
-.next{margin-top:25px;background:var(--navy);border-radius:20px;padding:25px 28px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.next h3{font:500 27px var(--display);margin:0 0 5px}
-.next p{color:#D4DDF1;font-size:12px;margin:0}
-.next a{flex:0 0 auto}
-footer{background:#07112F;color:#AEBBD8;text-align:center;padding:29px 20px;font-size:11px}
-footer b{color:#fff;font:900 12px var(--ui);letter-spacing:.12em}
-footer span{display:block;margin-top:5px;color:var(--lime);font:700 10px var(--ui)}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr .8fr;gap:20px}.cards{grid-template-columns:repeat(2,1fr)}.section-head{grid-template-columns:1fr .8fr;gap:25px}.control-band{grid-template-columns:1fr}.control-list{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:640px){
- .top-inner{width:calc(100% - 30px);height:60px}.nav{gap:9px}.nav a:not(.nav-cta){display:none}.nav-cta{font-size:10px;padding:9px 12px}
- .wrap{width:calc(100% - 32px)}
- .hero{padding:48px 0 38px}.hero-grid{display:block}.hero-copy>p{font-size:14px;line-height:1.75}
- h1{font-size:clamp(41px,11vw,54px);margin:18px 0 15px}
- .visual{min-height:275px;margin:17px 0 0;transform:scale(.92)}
- .phone{width:205px;min-height:265px}.visual-orbit{width:255px}.tag-a{left:0;top:8px}.tag-b{right:0;bottom:5px}
- .hero-meta{gap:7px;margin-top:20px}.pill{font-size:9px;padding:7px 10px}
- .hero-links{display:grid;grid-template-columns:1fr 1fr;margin-top:23px}.btn{font-size:11px;min-height:46px;padding:11px 12px}
- .ticker-inner{justify-content:flex-start;gap:19px;font-size:9px;padding:13px 16px}.ticker span:after{margin-left:19px}
- .section{padding:48px 0}.section-head{display:block;margin-bottom:22px}.section-head p{font-size:12px;margin-top:13px}
- h2{font-size:39px}.cards{grid-template-columns:1fr 1fr;gap:9px}.card{padding:16px 14px;min-height:0}.card h3{font-size:14px;margin:13px 0 7px}.card p{font-size:11px;line-height:1.6}.card-num{width:29px;height:29px}
- .integrations{grid-template-columns:1fr 1fr;gap:8px}.integration{padding:10px}.integration span{font-size:9px}
- .cost-layout{grid-template-columns:1fr;gap:26px}.cost-number{font-size:66px}.cost-copy h2{font-size:39px}.cost-copy>p{font-size:12px}
- .optimizations{grid-template-columns:1fr;gap:8px}.optimization{padding:12px}.optimization span{font-size:11px}
- .control-band{padding:19px;gap:20px}.control-band h3{font-size:27px}.control-list{grid-template-columns:1fr;gap:13px}.control-item span{font-size:11px}
- .timeline-grid{grid-template-columns:1fr;gap:8px}.milestone{padding:13px}.milestone p{font-size:11px}
- .keep{grid-template-columns:1fr;padding:19px;gap:12px}.keep h3{font-size:27px}.keep-content p{font-size:11px}
- .next{padding:20px;display:grid;grid-template-columns:1fr;gap:15px}.next h3{font-size:25px}.next a{width:100%}
- footer{padding:25px 15px}
+.section-head>p{font-size:12px;line-height:1.85;color:var(--muted);margin:0;max-width:450px}
+.executive-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.exec-card{border-radius:18px;padding:23px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 32px #00145e08}
+.exec-card.dark{background:linear-gradient(140deg,#00145E,#0A1231);color:#fff;border-color:#102b77}
+.exec-card h3{margin:0 0 10px;color:inherit;font:800 14px var(--ui)}
+.exec-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.exec-card.dark p{color:#D7E1F5}
+.exec-list{display:grid;gap:11px;margin-top:16px}
+.exec-line{display:grid;grid-template-columns:27px 1fr;gap:10px;align-items:start}
+.exec-line .num{width:26px;height:26px;display:grid;place-items:center;border-radius:8px;background:#9aff5f;color:var(--blue);font:900 9px var(--ui)}
+.exec-line b{display:block;font:800 11px var(--ui);margin-bottom:2px}
+.exec-line span{display:block;color:#D7E1F5;font-size:10px;line-height:1.55}
+.evidence{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.evidence-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px}
+.evidence-card strong{display:block;color:var(--blue);font:900 20px/1.1 var(--ui);letter-spacing:-.04em}
+.evidence-card span{display:block;margin-top:6px;color:var(--muted);font-size:9px;line-height:1.5}
+.note{margin-top:13px;padding:13px 15px;border-left:3px solid var(--electric);border-radius:0 10px 10px 0;background:#EEF0FF;color:#3C4560;font-size:10px;line-height:1.65}
+.area-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.area-card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0;box-shadow:0 10px 28px #00145e07}
+.area-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}
+.area-icon{width:33px;height:33px;border-radius:10px;display:grid;place-items:center;background:#EEF0FF;color:var(--electric);font:900 13px var(--ui)}
+.area-status{padding:5px 8px;border-radius:99px;background:#ECF9E7;color:#245A14;font:900 8px var(--ui);letter-spacing:.04em;text-transform:uppercase}
+.area-card h3{font:900 14px/1.3 var(--ui);color:var(--blue);margin:0 0 8px}
+.area-card p{font-size:11px;line-height:1.7;color:#5F687A;margin:0}
+.area-card p strong{color:#1C2947}
+.why{margin-top:11px;padding-top:10px;border-top:1px solid #EEF0F4;color:#26324B;font-size:10px;line-height:1.6}
+.rules{margin-top:18px;padding:18px;border-radius:17px;background:#07112F;color:#fff}
+.rules-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:13px}
+.rules-head h3{font:500 24px var(--display);margin:0}
+.rules-head span{font:800 8px var(--ui);letter-spacing:.12em;color:var(--lime);text-transform:uppercase}
+.rule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rule{padding:12px;border:1px solid #ffffff22;border-radius:11px;background:#ffffff09}
+.rule b{display:block;color:var(--lime);font:900 18px/1.1 var(--ui)}
+.rule span{display:block;color:#D5DDF0;font-size:9px;line-height:1.5;margin-top:5px}
+.timeline{position:relative;margin-top:24px}
+.timeline:before{content:"";position:absolute;left:12px;top:13px;bottom:10px;width:1px;background:#CCD4E4}
+.event{position:relative;padding-left:38px;margin-bottom:11px}
+.event:before{content:"";position:absolute;left:6px;top:17px;width:13px;height:13px;border:3px solid var(--paper);border-radius:50%;background:var(--electric);box-shadow:0 0 0 1px #BFC8DB}
+.event[open]:before{background:var(--lime);box-shadow:0 0 0 1px #7DC64A}
+.event summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 15px;border:1px solid var(--line);border-radius:13px;background:#fff;color:var(--blue)}
+.event summary::-webkit-details-marker{display:none}
+.event summary:after{content:"+";font:700 19px var(--ui);color:var(--electric)}
+.event[open] summary:after{content:"−"}
+.event-date{display:block;color:var(--electric);font:900 8px var(--ui);letter-spacing:.13em;text-transform:uppercase}
+.event-title{display:block;margin-top:3px;font:900 12px var(--ui)}
+.event-summary{display:block;margin-top:3px;color:var(--muted);font-size:10px;line-height:1.5}
+.event-body{padding:14px 16px 16px;margin-top:6px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.event-body h4{font:900 10px var(--ui);color:var(--blue);margin:10px 0 5px}
+.event-body h4:first-child{margin-top:0}
+.event-body ul{margin:0;padding-left:17px;color:#515B70;font-size:10px;line-height:1.75}
+.event-body li{padding:2px 0}
+.event-body strong{color:#202D4A}
+.flag{display:inline-block;margin-top:9px;padding:7px 9px;border-radius:8px;background:#FFF5D9;color:#73540B;font-size:9px;line-height:1.55}
+.indicator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.indicator{display:flex;align-items:flex-start;gap:11px;padding:14px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.indicator-dot{flex:0 0 8px;width:8px;height:8px;margin-top:5px;border-radius:50%;background:#AAB3C3}
+.indicator.done .indicator-dot{background:#67C943;box-shadow:0 0 0 4px #E7F8DF}
+.indicator b{display:block;color:var(--blue);font:900 10px var(--ui);margin-bottom:3px}
+.indicator span{display:block;color:var(--muted);font-size:9px;line-height:1.55}
+.indicator small{display:inline-block;margin-top:6px;color:#7A8496;font:900 7px var(--ui);letter-spacing:.09em;text-transform:uppercase}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:19px}
+.next-card{padding:18px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.next-card.dark{background:#07112F;border-color:#07112F;color:#fff}
+.next-card h3{margin:0 0 11px;color:var(--blue);font:900 12px var(--ui)}
+.next-card.dark h3{color:var(--lime)}
+.next-card ul{margin:0;padding-left:16px;color:#5B6578;font-size:10px;line-height:1.8}
+.next-card.dark ul{color:#D5DDF0}
+.closing{margin-top:19px;padding:20px 22px;border-radius:16px;background:linear-gradient(110deg,#00145E,#101B49);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.closing h3{margin:0 0 5px;font:500 25px/1.15 var(--display)}
+.closing p{margin:0;color:#D6E0F7;font-size:10px;line-height:1.6}
+.closing .btn{flex:0 0 auto}
+.footer{padding:27px 20px 95px;background:#fff;border-top:1px solid var(--line);text-align:center}
+.footer img{width:155px;height:auto;max-height:45px;object-fit:contain}
+.footer p{margin:9px 0 0;color:#7B8495;font-size:9px}
+.mobile-nav{display:none}
+@media(max-width:760px){
+ html{scroll-padding-top:67px}
+ .top-inner{width:calc(100% - 28px);height:58px}
+ .brand img{width:142px;max-height:32px}
+ .top-note{font-size:7px;letter-spacing:.1em}
+ .top-nav{display:none}
+ .wrap{width:calc(100% - 30px)}
+ .chapter{scroll-margin-top:67px}
+ .hero{padding:37px 0 26px}
+ .hero-grid{display:block}
+ .hero-copy>p{font-size:13px;line-height:1.75}
+ h1{font-size:clamp(40px,10.8vw,53px);margin:15px 0 13px;line-height:1.07}
+ .hero-meta{gap:6px;margin-top:16px}
+ .pill{font-size:8px;padding:6px 9px}
+ .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+ .btn{font-size:9px;min-height:43px;padding:10px 11px}
+ .hero-device{min-height:258px;margin-top:13px}
+ .orbit{width:222px}
+ .phone{width:195px;padding:13px}
+ .device-label{font-size:8px;padding:8px 10px}
+ .device-label b{font-size:11px}
+ .label-left{left:0;top:20px}.label-right{right:0;bottom:14px}
+ .ribbon-inner{justify-content:flex-start;flex-wrap:nowrap;overflow:hidden;white-space:nowrap;padding:11px 15px;gap:17px;font-size:8px}
+ .ribbon-inner span:after{margin-left:17px}
+ .section{padding:42px 0}
+ .section-head{display:block;margin-bottom:19px}
+ .section-head>p{font-size:11px;margin-top:10px}
+ h2{font-size:38px;line-height:1.1}
+ .executive-grid{grid-template-columns:1fr;gap:9px}
+ .exec-card{padding:17px;border-radius:15px}
+ .exec-card h3{font-size:12px}
+ .exec-card p{font-size:11px}
+ .exec-list{gap:10px;margin-top:13px}
+ .exec-line span{font-size:9px}
+ .evidence{grid-template-columns:repeat(3,1fr);gap:6px}
+ .evidence-card{padding:10px 8px;border-radius:11px}
+ .evidence-card strong{font-size:17px}
+ .evidence-card span{font-size:8px}
+ .note{font-size:9px;padding:11px 12px}
+ .area-grid{grid-template-columns:1fr;gap:8px}
+ .area-card{padding:15px;border-radius:14px}
+ .area-card h3{font-size:13px}
+ .area-card p{font-size:10px}
+ .why{font-size:9px}
+ .rules{padding:15px;border-radius:15px}
+ .rules-head{display:block}
+ .rules-head h3{font-size:22px}
+ .rules-head span{display:block;margin-top:5px}
+ .rule-grid{grid-template-columns:repeat(2,1fr);gap:7px}
+ .rule{padding:10px}
+ .rule b{font-size:16px}
+ .rule span{font-size:8px}
+ .timeline{margin-top:19px}
+ .event{padding-left:29px;margin-bottom:9px}
+ .timeline:before{left:9px}
+ .event:before{left:3px;width:13px;height:13px}
+ .event summary{padding:12px;border-radius:11px}
+ .event-title{font-size:11px}
+ .event-summary{font-size:9px}
+ .event-body{padding:12px;margin-top:5px}
+ .event-body ul{font-size:9px;line-height:1.7}
+ .event-body h4{font-size:9px}
+ .indicator-grid{grid-template-columns:1fr;gap:7px}
+ .indicator{padding:12px}
+ .indicator b{font-size:10px}
+ .indicator span{font-size:9px}
+ .next-grid{grid-template-columns:1fr;gap:8px}
+ .next-card{padding:15px}
+ .next-card ul{font-size:9px}
+ .closing{display:block;padding:17px;border-radius:14px}
+ .closing h3{font-size:23px}
+ .closing p{font-size:9px}
+ .closing .btn{width:100%;margin-top:14px}
+ .footer{padding:22px 15px 100px}
+ .footer img{width:140px}
+ .mobile-nav{position:fixed;display:grid;grid-template-columns:repeat(4,1fr);gap:3px;left:0;right:0;bottom:0;z-index:40;padding:7px 8px calc(7px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-top:1px solid #DDE3ED;box-shadow:0 -7px 24px #00145e12}
+ .mobile-nav a{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:48px;border-radius:10px;text-decoration:none;color:#737D90;font:900 7px var(--ui);letter-spacing:.04em}
+ .mobile-nav a i{font-style:normal;font:900 13px var(--ui)}
+ .mobile-nav a.active{background:#EEF2FF;color:var(--blue)}
+ .mobile-nav a.active i{color:var(--electric)}
+}
+@media(min-width:761px){
+ .mobile-nav{display:none}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
@@ -147,112 +235,315 @@ footer span{display:block;margin-top:5px;color:var(--lime);font:700 10px var(--u
 <body>
 <header class="top">
  <div class="top-inner">
-  <a class="brand" href="#inicio"><span class="brand-mark">N</span><span>NEUROTECH<small>ESTRATEGIA · IA · TRANSFORMACIÓN</small></span></a>
-  <nav class="nav" aria-label="Navegación del informe"><a href="#resultados">Resultados</a><a href="#inversion">Consumo IA</a><a href="#equipo">Próximos pasos</a><a class="nav-cta" href="#cierre">Cierre ↗</a></nav>
+  <a class="brand" href="#resumen" aria-label="NeuroTech Soluciones"><img src="data:image/webp;base64,AHYw2ee0s5SBPOpa/JxfsbAYYhKXqeC6vNcGd0uchZzSj/BgNJeh6CrNE8H4Nmllc0fcKQ8ByNCgor2JcpRr82tCEUAzsYc46jUH5H+lzgeypY4SfGhOcpqKCwCaPpYr4az0ZWInJBf1XkVVtmMaZer0mw7Pc1RW4CKwfJ8BR9LYFfdIN0Hgx/o8/F8OOKorUIrI0hNf+kXXYdXDhkl4P+yZhz8Vo0NVrg9pIhqfidZzJyTj/VIhheo094HoWsIQwH0DMf+PzuQ4YMLtxt8I0MucgFqwBDGJgPnNmsUqS6epXJwImwEoFtBklAMIW+oTaqCYqB82KsIca4NrQBFGt1hEiSnnfBavvVj4y5+ns+CWuwyFktkJRhX/qE52QoSmY4nS7heE2DZLiYLlH/wG2B0+gSjjfCUFLkCTe/o6OjY3715lKeT0GRNrmvq8FwC10N9ByKrAFguIk+F4PbAJUaFGvFEj6U9jEV+CakwQI/0KIMp9MlHP8sWRnDtowJz4nQBhlTItRa4HkwcF2B5zDJSqHnoAHJgRWg1KQyuIOuq8lGIdbiOLIxVPrNCpEkPZ9GUw2GzRjZuYEfGhrubQiKLinwHI5Sit95xtTzkIYwPEFfUG/HI4H7CiK3g5WptW53djmg6UOGmu6FNQIMf6LP0XM31LQVQ0F09e1wbdq1RpXYv5YBC4pebBDF0yW8q+8CdwQwtsQWtVilUBdmhnvpavD8G7QhRHt+FkMuxA97yMQaNmEsqP90aJe6uMQRtawRip5rEMOkEvXfD7inIHCHWsovvDKcU4dpkIaA4QD6HD1H4LFSijUCYy7yP3fdUdfb7toD1qVGFDheIqUMOzIw9RC0ITLcTZeI8dlb77yjnndfsbTi6gLPwyUrI1j70IOHDh069OBDBkAWZkfVFPgWIA0B1VfocyF+1zy2lGCZH1KO56L+UurMIsNGTHeKYU/6hOfz0DIZzqFLOF6OrEHOT0XO7oG6Zzi5wPE2WKnKpyycBFuYDa/DdGkUw5YMOXqOHFODvMmQ83xMK1npElLDLSVkT4bOUwysMuZinD9QtITJ2/QJz2ENYtiTPscQtmzqlhVbVkYMOzAkAv+9hGqRyYbeOe+9b3d3LarAMJ4+x8gOJhMw3BhdLsb234mhWHHI+eece+65555/TLdSgR+oSiLDVXSdJ2LvMeToeQ+apKCCg+mZrv4a2hCKlecx5jzHoQnFKqucc27+nPM2hGHZHxhz9PwzKgXShPH0zHsej2wRRaX/zyHmShYNYcjR8wmoFVSwBYvXgkE/SjFwD1RURJqwzDcxdh4yXEaXYOBRkMxU1Qy/+y7EhI+viaAhIJgSfY7B74CKpDTDEyx8GKZ4JLpEDNUh0MxULRMcw8B0WAe2iALDX+nrItL8eQw5el4BaJZZlglW/jR0OOdch/u8GSJ4hT4VZw5CsvkJBjaA4vcuxEQMPLsJ6Z3/xcAUj0bWIBmOYCrGr9cBLMuyzIDT2OHy7X4EMsNe9AnGOP9wpCvnMsSEj2+ayKKKSst/YqgHDCPoEvR8dC2kd5/BwLzjNTAY7qVLMPLr41dv7varfd9gYCNAMYEuwRj57hlbDuq/4RFPkIHJEL/oJdIgIkvOjCHHyNnH9kSy3/UMzMc4f3UopGk6Q4KRfOW4TQcM/MMZbYyRScfDkWFRBYZj6esi2vwxQ4KB1WcuGLr3oZe+QQbmY+j4LRQZTihiJOd9/uksMrBBZI12HxOkJ9nRTjJGph0PhaFBYDiMLsFAfn77sfvtf/K4HxiZ9LwfBhgG06UYA8n2DpKeac+2ikiXaPm2DhsshESz6Qz1gGF7upigZ2EMTDpeAwMUa7gYU4yeJEOIsTFgOJ3VAgYXSXrPQsfHxNAwUEymSzB6FnomQ5g7UBSA4R66FOk9yegD09HFrWHoEpXPGMpFLlgNutCBYXCdYLiA1Zhg9M555wLTju8toQJAZUr0BWQMIZJkbAwxPMhqAckYI4sdP1lWpIFEVphJlyCDc947H5mMVR4NAwDRJafTFZCMkcWxynNh6ApQTIq+XIjvZ5CFDxRP0tdFDDfRh0Stjv8eBAUAwy50JfIxzD5uAWMjQLTHU3SxqLTjl4OgaCAo1vmOLlVjcLwKhqRi5Y9ZLVE2eF4HQ9fIcDRrcPwrMiyU1nWhLhDFX0kXawqen64FQ1JxLztKxQ4e25cNAkH3e0kXa/KRb/SHoaFgWOsjhlBTdORlMElBsfLfGXxN0ZEXQ6WLiPT+VwxlYpi7KrQrneHavfe+wz9aCww3s90Xt7uzCiCKA/5NOh9LBBfIB5aDIS3a8yV6H1PRB96Hdaveee+9c6nRrt1776v+zVogwAmzSRdiUQyO5HU9YajLRa7d5zvcoTXBsMxYMvhQInpHfnMIVFCsaL6WjC6UiN6TX+0NFaTG+Q7vve/wj5a63bV7733V/702GPajC0WxypNh6ErnsPDZmlRWmMPS5xcBhr5XzyYZXNKT5Kt7AYpiwZJjSXrnnPMkrzJZl8VbJa5l4cc1QRQD7phHMrikJ8m/bQUo6jOKxYfXBgV2n0YyepcMJGdfsyIMpRXY5mmS9C4ZSH43ajkY0oZWFj5bagwL368DDBeSLuaiD7wRJl1IseYDE1tbW1snTNy/JigOnDihtXDig+tAi2DAqmdMnc/iGbdtL1BBWQH2muKYXDBpG4j0ur51Qmtr68TW2/pAoNh8wsTW1tbWCa1HQmsBDBh0zt/nszB+dM2mgAnqqtj44Ymtra2tE1vHrAapCaKQne7+isU/v3TKKoChRjFgixs/Y/FPU07oCxgKFUMmTmhtbW2dMHH/EoqdJk5obW1tnTBxeD1gGDGPDN4FMoyECrpQJws6UQzAqrudMvqGG6/808Hr9gBgqFEEWGPYJTfccPHQAYAKGlwNwGq7jbjshhuvOvvAtZoAMXRVA9Br4+EXXHvj9X85fqcVAZigdhOg+3pDz736xusvPX6nFQCYoIsr1rzzW5L88aFNIYKuJVaodYCV13KAZoKyZoLaTVCoBkCsWBJqxXUBNBOUNUUnqhVLfSBmKCuZor5mKCuZoLxaoZZSK64PDGjZ6tDhO/QFDHVuoC6tlqVVUGfNkoquqpalVdDVxbK0KTpRNEubYuGohqQq/pstBhXLMhPU//8QdPr/x0g0yyzLVOqnJo0hshjLUGx1W1zdUApscPRFo0cevQGgdZLfb7oMpAHEdDGLYS+GmqZBUE/DTtMC82HqrtB6CJq+4HBknWbYu21qP+jiFMVvPWt08X5YPRRHkJz58pNT/0XydGh9Po2HNkCGk8gBi1cg9nb05TyHI6uD4tft/Md+SwNo2ftdchdYgYiU+IydICKSMOz28lN9i0SkFhGpQUTKicgvsQxH0pUK8eveInXIcBHnbQCIAOjzXvU50ZxkAkAzKaemBWaSMgMAU9QomQKQTFJmIgZArEgyAaBWIJkAUJNfXCLd3qQrU+XRMNTRMD6+CRMA0g3HkStCAQWwREszAC1VR1GgqU9vAFZOATS39AKgiaT2WRKQlAJYsk93QCSnAHq19AQgv7SgWGMWXUwFxzEwqc8D8SNIkwqgMmDkBctAoGg54/mZ38144uju0KIKdht7NgQQ9LxqzEZQCLDd3R98+583rloDCsV6Y67rCYGi+9FPzPhu5nOnt8AgkJFj/9D8l+nffPXcoZCcYZmzX/z39589tBcggKDl3Bf/+f2XTx7VBPmlBcUmX5LOe+88eW9FBfXMcBH9Kchbpkgqdp7B9FtrQQu6YyTfTvWZw0OQiXS7hem5I2AZ9mNHC0Tx+7eZnrEjVKBfctRLTF4HBRTbz2B6wtIQlQGfMP1yX5FfWjD0u2MBk58eDgjqqjLgZ8Ynj1xnKQCwSiYwbNXOH0YP3nyPWxbwm4GworPdlNTSM93+yFQfIp8a/oftTmkjj0cFe7iv+8Aw8Bu237rH5oNH/cAFW8Cg77n51Qu23fK4T8h9YIbNF3DGiI3W2PbyeXyhhyom8ftTN11320t/5iTRX1xQYOCIsU8/fs2ezRBBnRU7fEky/vv1e4/7HaAQ6fUpv1wb+e1+4FOqRefwpYJ/8QB0w5GMf0a+1wT+uJJgT37XB6bPc9YOyK81g5/2FOiH7NgaAPrNCE9BpUcb310R+W1+4OlAy/fhFOQPIreC/eKCKAoN9Ve0jHj+B+bnP7Y21HAY3XaomFkFxzBuBqmTVd4Lk2GZWRN6f8cLkcKW5DGomFkF21b5R5i+xwdQMeuGM/nVEsBebN8YCkBxAv/RjOV/CGcCyCpNo+/YHPrLC9DMVDMT1F8kA9Bv++NumDaf/HFTNOHBOBUGAKJL/JMXQOuEdTx3lwwADCdPPlMKLuHMXioAYJgWx0C1jadqBpjszNn9gBvjG0v06d27d++llx40J24AfZmzzl6jJxZzSibI/+aaKt+uiLzO6yQBwTO8D1KvfdneH5qDALCC8ZwMQUJu4lRA23gSctiGP/YDnua8WbNnpT33hKwzg+SXr9x2SAtsMUWvFZYVQC0zAa6LYX1UpvNSyRIqj/Ch+g2Lc/oV5Ita+aBowRV8S2E1vcQFP89Nz5v94w5owrJnvvwTSc7YGbo4IsNx8z5rFkG+ybZk3B3yMm+HJQRT4+3QEi8W/DO3G90akhDptUqLFtwTp0BSuJdTAK2plQ8vtWyfZMtSvTMkl9/okDvmcM4q0MUSu5FboiKpbcjBwK3xIzMBYLrqTzyxxNnxHRGBat9Zuf7z+T+o5DLcP+9mFJzGWX3VAKh1/0e8HlbbSH6sKGzuLui75nJNCgCD5/FYZIshBL2/Dn9fAlAzBW4M7QOBHcgToFmWAbdwXn9IwTDOH4RKVsGe5IHI5Pn44RLIsizDhgt4TNGv23k1kGWZ4nRyG2htG/h4DJqampoynP/dlAquC89Bmrr1aMKX4U+LJWAYQb4xuBkAfnVxBx+BKh7n/KMVwBJ/CbwShkQF/Tvisy0ABn6eq2B78qn+ALDNDH7RW1MZrmX4czOAphPa+RgUNRnG8scDkP+fBTwd2JPhHAGA/RZwn8UTULmF5CeP3nXPU9+SM1YWVen7IfnGtRfe+hn5VA9VNH0a/ojMcBM548YL727/6btwADLFueSs8SNHPxM5f2tUsEf4tg9UezxDfnTzhTdMJ99fThT6bjixIMzqB5Nl3iafu+CkkVPJCZmqPEq+dtnp503s4Ds9RRZLiOCINqbnjFkRAgiWv28+87Ov7AYRNH3Fw5CJ9nqY+c+3m8mDkUEx/DMmX9oIatiHc1oggu5XzWZ+/r3LQQT6CU9Nbcf2FaGCpe+Yz/z/XtIEEel52zwm/7YyFIspBc1DLhk7edKdI9YGFAAU2OiCByePOeO3gADQ3Q9bHQIB9rlj8viT+2Df4atAAEXLYbc9/siVQxQGwUrD9+0GQIDfnjFm8gMXbAQoABly2G+ggGD5Yfs3Q6DA+ueNnzzm1IGAAAKsf964yQ9fugMgWDQHAFZQOCAIBQAAcCcAnQEqpAFMAD5hLpNGpCKhoSTbO5iADAllbuNAGCMei1gD+AfgB+gH8AT709vzPs6MU9w/I7oHOH/BvNXmz6zv4H3Ae8v/K+x77gPUw6WPmn/kP+H/Yr3gPQr6AH9V/qvq7/7v2APQA/gH+n9M32If2j/ar4DP19/92sr9K/wA/TPyw/w6rAdWuiOBBRgsdRi0NtPG1NOv718jmdgGZggPUaX/r8W+59sovkUs3mEbAu07LAMgtXdRf1q9fkjz5wL1xAgSDD4nWPkv6o1dk45q5dDz46WYpJbYs08iNmJGLRQwY/B7OMRvgWHbtjp0TJtfiK2ok+OFI4bb28Xzju5d2ha9/A85ngbLmTQir9Ol//nNN8fFJ/yi+ik9+Gd46w4zqfkFn35in9e2pQeR4u8N+a4z46WYsqHDlYsWvjLMWaEAAPxb9eJmrDG9cXlvfphu/6Wy3jTIymUsL/oODzyORL/DcXjOp9A01lCMgfYHnaaH819gzY1VGtmYMsPOKmAhfEcsd6lAwt0qYYwptllSG/jogd2B2wN0BrMiTjjUzTCKWbqcAKIunLWY8wzlVDl7jdZTPd2OJPmP80EiVrzbSfMiwVWv/aaGxv1nhtiwL2sR7a/ASUNwUdeuQbz4/IpHrQvuRG1CZPK1fwJnNfLISsm/XydQaKNhGrUcPTCXGL+0jHx+sRX9nrpaScN3oE1Ua6cToJuFPn8zGtXui0XCUEsRIbUz58G1boq7OpG7IOHlnplXBt4oyU9heHHHGfbfXXvnPep6TqYDz3n8cRHDIF//9kSU0GMxF59iX/GgyReZT1u3/s1TXuQ2n4JfFT2OnrGFDeoEfy8R/XMa1Nn6GDSClrL2MiyYKz3Q9nBuC8NvckvBSD+/0o0jSCrFHhHV/bndFGcc4Kq79pll/oxBchwer0sLP+0P+hc+50SyxyE9zACkVunH311NqdDm/anMiMMrymEIlJI5MDhz7jQsdnotyn0DsyD+Q7Vux7KGtQ2fI7GTf1GvRMf1GFJWFzSk8AnGIFx+Bf6KQIBja76ccs2Ocy81fV+6U1B2Kf1ml3MxcRzLa3+M8sUfhHK3WIcWsrKU86JBK6U4GLyL3eqFaiEx1yKXmYsDARj0hxiQw5iUxDcG/l5a+tkKSSwMicPYatyHV8xph3koW2m1nna9H0c4JACsmttM/LQighLOpBDf/nof//sZQjIIxNI9qHLQIrO87wjP9lFSLBlwOE+9JaUZJibU7yQEQ5K76Ns7iD9V9wcesW/71q/drQd5D9kdomQwMJ0ACJ7BmjHBhr+I2v6PIjuOS89pFds3TQLFYSUJxoJOB/aoa+0YHukcFcN8lOeWhjRkMOj/JgQrLMM0ayYvDBNg5m6Hzkm8Y+EBnbK8hM+okd2kY2dKyzuEOhu7oZGinu4c5GnfipQCB9sc/R1/qnIQf9U5W/9U5dv6pyE6nbAXvvOYO3YZ+M/QjGR+PclNg05kT/n1lX6S1tD3parylfMtGd+4r8J2SYLed+CYu5XDWwgf9R00+mlCWpyCVSq+jFk9IAlmz1vw8fiQHB6c0vf2WhyuqaB+Of//Pg2BWvdC240qlq8LeExFXN56iNf1NteRSlxy9B/HgT2Oz/9oHPbGve0QAIIpOhn2OOFHAztSNHYV23hUcJUNS8aa5IIfV3j1A6qgPhnL7/iSfRrgBz4jqYmX6KNqcv6RIBgAAAAAAA==" alt="NeuroTech Soluciones"></a>
+  <span class="top-note">Informe ejecutivo · Octubre 2026</span>
+  <nav class="top-nav" aria-label="Secciones del informe">
+   <a href="#resumen">Resumen</a><a href="#impacto">Mejoras</a><a href="#evolucion">Evolución</a><a class="top-cta" href="#indicadores">Próximos pasos</a>
+  </nav>
  </div>
+ <div class="progress"><span id="progressBar"></span></div>
 </header>
 <main>
-<section class="hero" id="inicio">
+<section class="hero chapter" id="resumen">
  <div class="wrap hero-grid">
   <div class="hero-copy">
-   <div class="kicker">INFORME DE EVOLUCIÓN · OCTUBRE 2026</div>
-   <h1>La atención digital, <em>más conectada con el equipo.</em></h1>
-   <p>Primer mes del asistente inteligente de WhatsApp de El Viejo Bodegón. Adaptamos su funcionamiento a la operación real del restaurante: atención, pedidos, pagos y promociones.</p>
-   <div class="hero-meta"><span class="pill">Puesta en marcha · 01.10</span><span class="pill">Seguimiento sobre casos reales</span></div>
-   <div class="hero-links"><a class="btn btn-lime" href="#resultados">Ver mejoras ↓</a><a class="btn btn-line" href="#inversion">Consumo de IA ↗</a></div>
+   <div class="kicker">EL VIEJO BODEGÓN · PRIMER MES DE OPERACIÓN</div>
+   <h1>Una atención digital <em>más conectada con el equipo.</em></h1>
+   <p>Desde la puesta en marcha del 1 de octubre, ajustamos el asistente de WhatsApp sobre situaciones reales del restaurante: atención, pagos, pedidos, reservas y promociones.</p>
+   <div class="hero-meta"><span class="pill"><i></i> 01 al 30 de octubre</span><span class="pill">Evolución sobre casos reales</span></div>
+   <div class="hero-actions"><a class="btn btn-lime" href="#impacto">Ver mejoras del negocio ↓</a><a class="btn btn-line" href="#evolucion">Consultar cronología</a></div>
   </div>
-  <div class="visual" aria-label="Representación de la atención digital conectada con el equipo">
-   <div class="visual-orbit"></div>
-   <div class="float-tag tag-a"><b>4</b>herramientas conectadas</div>
+  <div class="hero-device" aria-label="Ejemplo visual de atención digital">
+   <div class="orbit"></div>
+   <div class="device-label label-left"><b>4 herramientas</b>conectadas</div>
    <div class="phone">
-    <div class="phone-head"><span>EL VIEJO BODEGÓN</span><span class="online">● EN LÍNEA</span></div>
-    <div class="chat">¡Hola! ¿En qué podemos ayudarte hoy?</div>
-    <div class="chat reply">Quiero consultar por un pedido.</div>
-    <div class="chat">Te comparto el acceso para realizarlo desde nuestra web.</div>
-    <div class="status"><i></i> Atención coordinada con el equipo</div>
+    <div class="phone-top"><span>EL VIEJO BODEGÓN</span><span class="online">● EN LÍNEA</span></div>
+    <div class="msg">¡Hola! ¿En qué podemos ayudarte hoy?</div>
+    <div class="msg reply">Quiero hacer un pedido.</div>
+    <div class="msg">Podés realizarlo desde nuestra web. Te comparto el acceso.</div>
+    <div class="phone-status"><i></i> Atención coordinada con el equipo</div>
    </div>
-   <div class="float-tag tag-b"><b>IA + EQUIPO</b>Una misma experiencia</div>
+   <div class="device-label label-right"><b>IA + PERSONAS</b>Un mismo servicio</div>
   </div>
  </div>
 </section>
-<div class="ticker"><div class="ticker-inner"><span>ATENCIÓN COORDINADA</span><span>PAGOS CON CONTROL</span><span>PEDIDOS MEJOR GUIADOS</span><span>EL EQUIPO CONSERVA EL CONTROL</span></div></div>
-<section class="section" id="resultados">
+<div class="ribbon"><div class="ribbon-inner"><span>ATENCIÓN COORDINADA</span><span>PAGOS CON CONTROL HUMANO</span><span>PEDIDOS MEJOR ENCAMINADOS</span><span>INFORMACIÓN ACTUALIZADA</span></div></div>
+
+<section class="section chapter" aria-labelledby="lectura">
  <div class="wrap">
   <div class="section-head">
-   <div><div class="overline">01 / VALOR PARA EL NEGOCIO</div><h2>Qué cambió <em>en la operación.</em></h2></div>
-   <p>El trabajo técnico se traduce en menos interferencias, cobros mejor controlados y clientes orientados hacia el canal correcto.</p>
+   <div><div class="overline">01 / RESUMEN EJECUTIVO</div><h2 id="lectura">Qué cambió <em>este primer mes.</em></h2></div>
+   <p>El trabajo no consistió solamente en sumar respuestas automáticas. Se ajustaron reglas para que el asistente acompañe la operatoria del local sin reemplazar las decisiones del equipo.</p>
   </div>
-  <div class="cards">
-   <article class="card"><span class="card-num">01</span><h3>Atención coordinada</h3><p>El asistente no inicia chats por error ni interrumpe al personal. Se pausa ante respuestas automáticas repetitivas y conserva las conversaciones marcadas sin bot.</p></article>
-   <article class="card"><span class="card-num">02</span><h3>Cobros bajo control</h3><p>Envía hasta dos avisos de pago, revisa importe y comprobantes, y deriva diferencias al equipo. La acreditación final sigue siendo humana.</p></article>
-   <article class="card"><span class="card-num">03</span><h3>Pedidos mejor guiados</h3><p>Orienta hacia OlaClick, controla el mínimo de 15 piezas de sushi y avisa al equipo cuando la demanda alcanza 6 pedidos de sushi.</p></article>
-   <article class="card"><span class="card-num">04</span><h3>Respuestas más naturales</h3><p>Interpreta mensajes y audios, evita repetir información y reconoce la carta solicitada. Consulta promociones de los próximos 10 días.</p></article>
+  <div class="executive-grid">
+   <article class="exec-card dark">
+    <h3>La evolución, en términos del negocio</h3>
+    <p>La atención digital quedó mejor conectada con los canales de pedidos y cobros, con límites más claros para intervenir y derivar.</p>
+    <div class="exec-list">
+     <div class="exec-line"><span class="num">01</span><div><b>Menos interferencias</b><span>El asistente evita iniciar conversaciones por error y no se superpone con el personal.</span></div></div>
+     <div class="exec-line"><span class="num">02</span><div><b>Más control en los pagos</b><span>Recuerda pagos pendientes y deriva comprobantes dudosos para validación humana.</span></div></div>
+     <div class="exec-line"><span class="num">03</span><div><b>Pedidos mejor orientados</b><span>Prioriza la web y conserva reglas específicas para sushi, demoras y direcciones.</span></div></div>
+     <div class="exec-line"><span class="num">04</span><div><b>Información más precisa</b><span>Reconoce cartas y promociones futuras y evita repetir datos ya explicados.</span></div></div>
+    </div>
+   </article>
+   <article class="exec-card">
+    <h3>La base tecnológica conectada</h3>
+    <p>El asistente trabaja con las herramientas que intervienen en la atención diaria.</p>
+    <div class="exec-list">
+     <div class="exec-line"><span class="num">WA</span><div><b>WhatsApp</b><span>Mensajes, archivos y transcripción de audios.</span></div></div>
+     <div class="exec-line"><span class="num">OC</span><div><b>OlaClick</b><span>Consultas de pedidos, estados y datos comerciales.</span></div></div>
+     <div class="exec-line"><span class="num">MP</span><div><b>Mercado Pago</b><span>Conexión restablecida para consultar cobros.</span></div></div>
+     <div class="exec-line"><span class="num">CW</span><div><b>Chatwoot</b><span>Historial, etiquetas, notas internas y toma de control humana.</span></div></div>
+    </div>
+   </article>
   </div>
-  <div class="integrations" aria-label="Herramientas conectadas">
-   <div class="integration"><span class="integration-mark">WA</span><div><b>WhatsApp</b><br><span>Atención y audios</span></div></div>
-   <div class="integration"><span class="integration-mark">OC</span><div><b>OlaClick</b><br><span>Pedidos y carta</span></div></div>
-   <div class="integration"><span class="integration-mark">MP</span><div><b>Mercado Pago</b><br><span>Consulta de cobros</span></div></div>
-   <div class="integration"><span class="integration-mark">CW</span><div><b>Chatwoot</b><br><span>Equipo e historial</span></div></div>
+  <div class="evidence">
+   <div class="evidence-card"><strong>4</strong><span>personas recibieron un saludo no solicitado antes de corregir ese comportamiento.</span></div>
+   <div class="evidence-card"><strong>6+</strong><span>respuestas podía enviar el bot ante otro bot antes de incorporar la pausa.</span></div>
+   <div class="evidence-card"><strong>0</strong><span>resultados posteriores cuantificados informados hasta el cierre de octubre.</span></div>
   </div>
-  <details class="timeline">
-   <summary>Ver los principales hitos de octubre</summary>
-   <div class="timeline-grid">
-    <article class="milestone"><small>03 OCTUBRE</small><b>Estabilidad y atención</b><p>Se corrigieron mensajes espontáneos, pausas, detección de bots y coordinación con el personal. Se agregó el aviso de alta demanda.</p></article>
-    <article class="milestone"><small>05 AL 12 OCTUBRE</small><b>Pagos y reglas comerciales</b><p>Recordatorios y controles de comprobantes, descuento en efectivo, mínimo de sushi, reconexión de Mercado Pago y ajustes de reservas.</p></article>
-    <article class="milestone"><small>23 AL 30 OCTUBRE</small><b>Experiencia y promociones</b><p>Menos repeticiones, cartas por nombre, pedidos orientados a la web, consulta de promociones futuras y actualización del alias.</p></article>
-   </div>
-  </details>
+  <div class="note"><strong>Cómo leer estos datos:</strong> los dos primeros describen situaciones detectadas antes de los ajustes, no resultados posteriores. Todavía no contamos con una medición comparable que permita afirmar cuánto bajaron los errores, cuánto tiempo se ahorró o cuántos pedidos adicionales se generaron.</div>
  </div>
 </section>
-<section class="section dark-section" id="inversion">
- <div class="wrap cost-layout">
-  <div>
-   <div class="cost-label">CONSUMO DE INTELIGENCIA ARTIFICIAL · OCTUBRE</div>
-   <div class="cost-number">$40.000</div>
-   <div class="cost-caption">Consumo de modelos de IA durante el período.</div>
-   <p class="cost-note">Este importe corresponde al uso de IA. No es el abono de mantenimiento ni incluye otros servicios.</p>
-  </div>
-  <div class="cost-copy">
-   <h2>La IA también se <em>optimiza.</em></h2>
-   <p>Trabajamos para que cada interacción use la información necesaria y responda sin vueltas. Ajustamos instrucciones y flujos para evitar repeticiones y consultas innecesarias.</p>
-   <div class="optimizations">
-    <div class="optimization"><b>Menos repetición</b><span>No vuelve a explicar precios y condiciones que ya informó.</span></div>
-    <div class="optimization"><b>Respuestas enfocadas</b><span>Cada flujo se concentra en la tarea que debe resolver.</span></div>
-    <div class="optimization"><b>Revisión continua</b><span>Se ajustan instrucciones según conversaciones reales.</span></div>
-   </div>
-   <div class="honesty">El objetivo es administrar mejor el consumo. Para informar un ahorro en pesos o porcentaje necesitamos comparar este período con una base anterior equivalente.</div>
-  </div>
- </div>
-</section>
-<section class="section" id="equipo">
+
+<section class="section chapter" id="impacto" aria-labelledby="impacto-title" style="background:#fff">
  <div class="wrap">
-  <div class="control-band">
-   <h3>La IA resuelve tareas.<br><em>El equipo conserva el control.</em></h3>
-   <div class="control-list">
-    <div class="control-item"><b>Atención humana</b><span>Si una persona del local interviene, el asistente no se superpone.</span></div>
-    <div class="control-item"><b>Pagos sensibles</b><span>Si hay diferencias, deja una nota interna. No confirma acreditaciones por su cuenta.</span></div>
-    <div class="control-item"><b>Información dudosa</b><span>Si una promoción no figura, evita negarla y consulta al equipo.</span></div>
+  <div class="section-head">
+   <div><div class="overline">02 / MEJORAS RELEVANTES</div><h2 id="impacto-title">Seis áreas de <em>impacto operativo.</em></h2></div>
+   <p>Qué situación se atendió, qué se cambió y por qué puede importarle al restaurante. Los beneficios se presentan como potenciales hasta contar con mediciones posteriores.</p>
+  </div>
+  <div class="area-grid">
+   <article class="area-card">
+    <div class="area-top"><span class="area-icon">01</span><span class="area-status">Implementado</span></div>
+    <h3>Experiencia del cliente</h3>
+    <p><strong>Situación:</strong> respuestas repetidas, carta incorrecta por horario y preguntas reiteradas de dirección. <strong>Cambio:</strong> el bot respeta la carta pedida por nombre, evita repetir precios y pregunta la dirección una sola vez.</p>
+    <div class="why"><strong>Por qué importa:</strong> una conversación más clara y menos frustrante para quien consulta.</div>
+   </article>
+   <article class="area-card">
+    <div class="area-top"><span class="area-icon">02</span><span class="area-status">Implementado</span></div>
+    <h3>Operación y equipo</h3>
+    <p><strong>Situación:</strong> el asistente podía interferir cuando atendía una persona o ante mensajes automáticos. <strong>Cambio:</strong> reconoce esas situaciones, pausa conversaciones y deja notas internas para el equipo.</p>
+    <div class="why"><strong>Por qué importa:</strong> menos superposición entre la atención automática y la atención del local.</div>
+   </article>
+   <article class="area-card">
+    <div class="area-top"><span class="area-icon">03</span><span class="area-status">Implementado</span></div>
+    <h3>Pedidos</h3>
+    <p><strong>Situación:</strong> los pedidos armados por chat podían quedar incompletos y las reglas generales no alcanzaban para el sushi. <strong>Cambio:</strong> la web pasa a ser el canal habitual; se incorporan mínimo de 15 piezas y aviso de alta demanda.</p>
+    <div class="why"><strong>Por qué importa:</strong> orientar al canal de compra y anticipar situaciones que pueden demorar la preparación.</div>
+   </article>
+   <article class="area-card">
+    <div class="area-top"><span class="area-icon">04</span><span class="area-status">Implementado</span></div>
+    <h3>Confiabilidad</h3>
+    <p><strong>Situación:</strong> saludos no solicitados, ciclos con otros bots y comprobantes que requieren revisión. <strong>Cambio:</strong> se agregaron pausas, controles de importe, destino y duplicados, y derivación de excepciones.</p>
+    <div class="why"><strong>Por qué importa:</strong> evitar respuestas fuera de contexto y mantener la validación de pagos en manos del equipo.</div>
+   </article>
+   <article class="area-card">
+    <div class="area-top"><span class="area-icon">05</span><span class="area-status">Implementado</span></div>
+    <h3>Identidad del servicio</h3>
+    <p><strong>Situación:</strong> las respuestas podían sentirse automáticas o contradecir la carta, las reservas y las promociones vigentes. <strong>Cambio:</strong> se ajustó el contexto de las respuestas y la consulta de promociones futuras.</p>
+    <div class="why"><strong>Por qué importa:</strong> mantener una comunicación más coherente con la propuesta real del restaurante.</div>
+   </article>
+   <article class="area-card">
+    <div class="area-top"><span class="area-icon">06</span><span class="area-status">Configurado</span></div>
+    <h3>Eficiencia económica</h3>
+    <p><strong>Situación:</strong> recordatorios y cálculos de descuento dependían de intervención manual. <strong>Cambio:</strong> se automatizaron hasta dos avisos de pago y el cálculo del 10% en efectivo, con redondeo al millar y reglas de no acumulación.</p>
+    <div class="why"><strong>Por qué importa:</strong> puede reducir tareas repetitivas y errores de cálculo. <strong>No hay ahorro monetario medido.</strong></div>
+   </article>
+  </div>
+  <div class="rules">
+   <div class="rules-head"><h3>Reglas operativas configuradas</h3><span>Parámetros del sistema · no son resultados</span></div>
+   <div class="rule-grid">
+    <div class="rule"><b>15 piezas</b><span>Mínimo de sushi que revisa el asistente.</span></div>
+    <div class="rule"><b>2 avisos</b><span>Máximo de recordatorios de pago, separados por 15 minutos.</span></div>
+    <div class="rule"><b>10 días</b><span>Anticipación de consulta de promociones futuras.</span></div>
+    <div class="rule"><b>6 pedidos</b><span>Umbral configurado para avisar posible demora en sushi.</span></div>
+    <div class="rule"><b>10%</b><span>Descuento en efectivo, cuando corresponde, con redondeo al millar.</span></div>
+    <div class="rule"><b>1 por 15</b><span>Porción de salsa de soja cada 15 piezas.</span></div>
    </div>
   </div>
-  <div class="section-head" style="margin:48px 0 20px">
-   <div><div class="overline">02 / LO QUE NECESITAMOS DEL LOCAL</div><h2>Información actualizada, <em>mejor atención.</em></h2></div>
-   <p>El asistente responde según la información que recibe. Para evitar ofrecer productos retirados o promociones vencidas, necesitamos mantener una única fuente de datos al día.</p>
+ </div>
+</section>
+
+<section class="section chapter" id="evolucion" aria-labelledby="evolucion-title">
+ <div class="wrap">
+  <div class="section-head">
+   <div><div class="overline">03 / CRONOLOGÍA DE EVOLUCIÓN</div><h2 id="evolucion-title">Un mes de ajustes <em>sobre situaciones reales.</em></h2></div>
+   <p>El resumen permite recorrer los hitos. Abrí cada fecha para consultar el detalle técnico que queda conservado como registro maestro.</p>
   </div>
-  <div class="keep">
-   <h3>Un cambio de carta<br><em>también debe llegar al bot.</em></h3>
-   <div class="keep-content">
-    <p><strong>Menú, precios y disponibilidad:</strong> informar cada modificación a NeuroTech, preferentemente por escrito. Una imagen gráfica sola puede ser ambigua y requiere interpretación adicional.</p>
-    <p><strong>Promociones:</strong> cargarlas en la planilla, con activa = TRUE y fechas desde/hasta. El asistente ya consulta las promociones que comienzan dentro de los próximos 10 días.</p>
-    <p><strong>Importante:</strong> en octubre una modificación de carta no informada hizo que el bot mencionara un producto que ya no estaba disponible. La actualización compartida evita que se repita.</p>
-   </div>
+  <div class="timeline">
+   <details class="event">
+    <summary><span><span class="event-date">01 OCTUBRE 2026</span><span class="event-title">Puesta en marcha</span><span class="event-summary">Inicio de la atención real por WhatsApp.</span></span></summary>
+    <div class="event-body">
+     <h4>Qué se inició</h4>
+     <ul><li>Se puso en funcionamiento el asistente de IA de WhatsApp de El Viejo Bodegón.</li><li>Comenzó el seguimiento de conversaciones reales para detectar ajustes en atención, pedidos, pagos, reservas y promociones.</li></ul>
+     <div class="flag">Evidencia disponible: fecha de puesta en marcha informada. No se adjuntó un volumen inicial de conversaciones ni una línea base de resultados.</div>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">03 OCTUBRE 2026</span><span class="event-title">Atención y estabilidad</span><span class="event-summary">Se limitaron mensajes espontáneos, interferencias y respuestas en bucle.</span></span></summary>
+    <div class="event-body">
+     <h4>Contactos y conversaciones</h4>
+     <ul>
+      <li>Se corrigió un evento vacío del celular que provocaba el envío de «¡Hola! ¿Cómo te ayudo?» a personas que nunca habían escrito. Se registraron <strong>4 personas afectadas</strong> antes de la corrección.</li>
+      <li>Si otro bot escribe, el asistente ahora se pausa después de la <strong>tercera respuesta consecutiva fuera de tema</strong> y deja una nota para el equipo. Antes podía responder seis veces o más a un bot de ventas ajeno.</li>
+      <li>El saludo automático de WhatsApp Business y los avisos de OlaClick dejaron de confundirse con una persona del local atendiendo.</li>
+      <li>Los chats marcados como <strong>«sin-bot»</strong> permanecen pausados. Antes la pausa duraba solamente 24 horas.</li>
+      <li>Se corrigió la identificación de contactos que aparecían como «WA 39681…» para resolverlos al número real de teléfono.</li>
+      <li>Se ajustó el orden: el mensaje se marca como leído antes de mostrar «escribiendo…». El objetivo es que la interacción sea más natural y reducir señales que puedan generar controles de WhatsApp; no se informó una medición posterior de bloqueos.</li>
+      <li>Cuando una persona del local ya está hablando con el cliente, el asistente no interviene.</li>
+     </ul>
+     <h4>Preparación y demora</h4>
+     <ul><li>Se incorporó un contador de pedidos de sushi y un aviso de posible demora cuando se alcanza el umbral de seis pedidos.</li></ul>
+     <div class="flag">Evidencia: incidentes previos documentados y cambios de comportamiento configurados. Falta medir la frecuencia de estos incidentes después del ajuste.</div>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">05 OCTUBRE 2026</span><span class="event-title">Pagos, promociones y mínimo de sushi</span><span class="event-summary">Recordatorios, revisión de comprobantes y reglas comerciales.</span></span></summary>
+    <div class="event-body">
+     <h4>Pagos pendientes y comprobantes</h4>
+     <ul>
+      <li>El primer aviso de pago pendiente se envía 15 minutos después del pedido. Si sigue impago, se envía un segundo y último aviso 15 minutos después.</li>
+      <li>El sistema no envía más de dos recordatorios, no avisa entre la 1:00 y las 10:00 y excluye a quienes ya enviaron el comprobante.</li>
+      <li>Se incorpora la etiqueta automática <strong>«no-pago»</strong> mientras el pago está pendiente y se retira al recibir el comprobante.</li>
+      <li>Si no coincide el importe, la cuenta de destino o se detecta un comprobante repetido, se deja una nota privada para el equipo.</li>
+      <li>Se comparan importe, destino y posibles duplicados. La respuesta al cliente es: «Recibí tu comprobante; el equipo lo acredita y te confirma». <strong>El asistente no confirma por sí solo la acreditación final.</strong></li>
+      <li>Se precisaron los medios de pago: efectivo, transferencia y tarjeta en una cuota. La tarjeta queda limitada a retiro o consumo en el local.</li>
+     </ul>
+     <h4>Descuentos y promociones</h4>
+     <ul>
+      <li>Se configuró el cálculo del <strong>10% de descuento en efectivo</strong> cuando corresponde, con redondeo al millar para facilitar el manejo del vuelto.</li>
+      <li>Las promociones no se acumulan. Si el pedido ya tiene otra promoción o califica para el vino de regalo, no se aplica el 10% adicional.</li>
+     </ul>
+     <h4>Mínimo de 15 piezas de sushi</h4>
+     <ul>
+      <li>OlaClick permite configurar un mínimo por monto, pero ese criterio no alcanza cuando la carta combina sushi, parrilla y otros productos.</li>
+      <li>Por eso el asistente revisa el pedido y, si el sushi suma menos de 15 piezas, informa el mínimo y sugiere agregar productos. La regla se aplica desde el asistente, independientemente del mínimo general de OlaClick.</li>
+      <li>Quedó identificado para validar qué productos cuentan como piezas: productos de la categoría sushi, combos y woks.</li>
+      <li>También debe comprobarse en qué momento se muestra el aviso: antes de cerrar el pedido en OlaClick o al reenviar el resumen. Si aparece después de que el pedido ingresó, el asistente ya no puede modificarlo y solo puede pedir que se agreguen piezas.</li>
+     </ul>
+     <div class="flag">Punto pendiente de validación: criterio exacto de cómputo de piezas y momento del aviso. No se presenta como resuelto hasta probarlo con pedidos reales.</div>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">08 OCTUBRE 2026</span><span class="event-title">Pedidos web y reglas de carta</span><span class="event-summary">La web se prioriza sin eliminar la alternativa excepcional por WhatsApp.</span></span></summary>
+    <div class="event-body">
+     <h4>Canal de pedidos</h4>
+     <ul><li>Se solicitó dejar de tomar pedidos por WhatsApp como vía habitual y enviar un mensaje con instrucciones y acceso a la web.</li><li>Se conservó la alternativa excepcional de tomar el pedido por chat cuando la persona no puede utilizar el canal digital, por ejemplo por dificultades de acceso o manejo de tecnología.</li></ul>
+     <h4>Salsa de soja</h4>
+     <ul><li>Se corrigió la información: donde decía una porción cada 20 piezas, ahora indica <strong>una porción cada 15 piezas</strong>.</li></ul>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">09 OCTUBRE 2026</span><span class="event-title">Conexión con Mercado Pago</span><span class="event-summary">Se restableció la consulta de cobros.</span></span></summary>
+    <div class="event-body"><ul><li>Se reconectó Mercado Pago para que el asistente pueda consultar los cobros y contrastar la información disponible.</li><li>La acreditación y confirmación final del pago continúa a cargo del equipo del restaurante.</li></ul></div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">12 OCTUBRE 2026</span><span class="event-title">Consultas de reservas</span><span class="event-summary">Se revisó una regla demasiado estricta que bloqueaba respuestas.</span></span></summary>
+    <div class="event-body">
+     <ul><li>Se detectó que la regla «no se hacen reservas» era demasiado estricta y dificultaba responder consultas sobre reservas.</li><li>En la revisión se indicó que cerca del 70% de las consultas analizadas estaban relacionadas con reservas. No se informó el período ni el tamaño de la muestra, por lo que se conserva como observación preliminar y no como KPI.</li><li>Se ajustó el comportamiento para responder mejor este tipo de consultas.</li><li>Se recordó la importancia de cargar las promociones correctamente para que el asistente responda según la información vigente.</li></ul>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">23 OCTUBRE 2026</span><span class="event-title">Respuestas más precisas</span><span class="event-summary">La carta solicitada y el contexto de la conversación prevalecen.</span></span></summary>
+    <div class="event-body">
+     <ul><li>Si una persona pide expresamente la carta de la noche, cena o sushi al mediodía, ahora recibe esa carta. Si no especifica cuál quiere, se mantiene la carta correspondiente al horario.</li><li>Se ajustó la conversación para no repetir precios y condiciones que ya fueron explicados. El asistente debe responder sobre la información nueva que aporta el cliente.</li></ul>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">28 OCTUBRE 2026</span><span class="event-title">Pedidos web y promociones futuras</span><span class="event-summary">Se evitó negar promociones próximas y se ordenó la consulta de direcciones.</span></span></summary>
+    <div class="event-body">
+     <h4>Pedidos y direcciones</h4>
+     <ul><li>Se reforzó la web como canal habitual: por WhatsApp el asistente explica dónde hacer el pedido y comparte el enlace, en lugar de anotar platos y armarlo por chat. Se mantiene la alternativa excepcional acordada para quien no pueda utilizar el canal digital.</li><li>El objetivo es evitar pedidos incompletos o con información dispersa en la conversación.</li><li>Si falta el barrio, el asistente pregunta una sola vez. Si la persona envía solo la calle o una ubicación, informa que el equipo confirmará el dato en lugar de insistir repetidamente.</li></ul>
+     <h4>Promociones futuras</h4>
+     <ul><li>Se detectó un caso con la promoción de ñoquis libres: estaba cargada para el 29/10, pero una consulta del 28/10 recibió una respuesta incorrecta porque el asistente solo reconocía promociones vigentes en la fecha consultada.</li><li>Se amplió la consulta a promociones que comienzan dentro de los próximos <strong>10 días</strong>.</li><li>Si una promoción no aparece en la información disponible, el asistente ya no debe negarla: avisa al equipo para verificarla.</li><li>Se crearon tres flujos para cubrir estos escenarios de promociones futuras.</li><li>La carga en la planilla sigue a cargo del restaurante: promoción activa = TRUE y fechas desde/hasta correctamente completadas.</li></ul>
+    </div>
+   </details>
+   <details class="event">
+    <summary><span><span class="event-date">30 OCTUBRE 2026</span><span class="event-title">Actualización del alias de cobro</span><span class="event-summary">Se modificó el dato utilizado en las respuestas de transferencia.</span></span></summary>
+    <div class="event-body"><ul><li>Se actualizó el alias de Mercado Pago a <strong>elviejobodegonsanra</strong>.</li><li>Se debe verificar que las comunicaciones y materiales del local utilicen el mismo dato vigente.</li></ul></div>
+   </details>
   </div>
-  <div class="next" id="cierre">
-   <div><h3>Seguimos mejorando sobre la operación real.</h3><p>Revisión de conversaciones, optimización de consumo y actualización de reglas e integraciones.</p></div>
-   <a class="btn btn-lime" href="#inicio">Volver al inicio ↑</a>
+ </div>
+</section>
+
+<section class="section chapter" id="indicadores" aria-labelledby="indicadores-title" style="background:#fff">
+ <div class="wrap">
+  <div class="section-head">
+   <div><div class="overline">04 / INDICADORES Y PRÓXIMOS PASOS</div><h2 id="indicadores-title">Lo implementado y <em>lo que falta medir.</em></h2></div>
+   <p>El primer mes permite verificar cambios de configuración y situaciones detectadas. Para evaluar el impacto comercial necesitamos empezar a registrar resultados comparables.</p>
+  </div>
+  <div class="indicator-grid">
+   <div class="indicator done"><i class="indicator-dot"></i><div><b>Canales e integraciones</b><span>WhatsApp, OlaClick, Chatwoot y Mercado Pago conectados para las funciones descriptas.</span><small>Implementado</small></div></div>
+   <div class="indicator done"><i class="indicator-dot"></i><div><b>Reglas de atención y pagos</b><span>Pausas, derivaciones, recordatorios y controles configurados.</span><small>Implementado</small></div></div>
+   <div class="indicator"><i class="indicator-dot"></i><div><b>Pedidos completados por la web</b><span>Falta medir cuántas consultas terminan en pedidos confirmados.</span><small>Sin dato de resultado</small></div></div>
+   <div class="indicator"><i class="indicator-dot"></i><div><b>Pagos recuperados por recordatorio</b><span>Falta registrar avisos enviados, comprobantes recibidos y pagos acreditados.</span><small>Sin dato de resultado</small></div></div>
+   <div class="indicator"><i class="indicator-dot"></i><div><b>Resolución sin intervención humana</b><span>Falta medir consultas resueltas por el asistente y casos derivados al equipo.</span><small>Sin dato de resultado</small></div></div>
+   <div class="indicator"><i class="indicator-dot"></i><div><b>Errores, demoras y satisfacción</b><span>Falta establecer un registro periódico de reclamos, respuestas incorrectas y experiencia del cliente.</span><small>Sin dato de resultado</small></div></div>
+   <div class="indicator"><i class="indicator-dot"></i><div><b>Consumo y costo de IA</b><span>No se incorporó un reporte de consumo ni un costo por conversación para octubre.</span><small>Sin dato de resultado</small></div></div>
+   <div class="indicator"><i class="indicator-dot"></i><div><b>Ahorro de tiempo o dinero</b><span>No hay una medición que permita cuantificar ahorro, ventas incrementales o reducción de costos.</span><small>No cuantificado</small></div></div>
+  </div>
+  <div class="note"><strong>Por qué no hay gráficos de rendimiento:</strong> no se recibieron series de datos comparables de conversaciones, pedidos, pagos, tiempos o costos. Mostrar porcentajes o curvas ahora daría una precisión que todavía no tenemos.</div>
+  <div class="next-grid">
+   <article class="next-card">
+    <h3>Acciones del restaurante</h3>
+    <ul>
+     <li>Enviar por escrito cada cambio de carta, precio, producto o disponibilidad. La pieza gráfica sola puede ser ambigua y su interpretación puede sumar costo y errores.</li>
+     <li>Mantener la planilla de promociones al día, con activa = TRUE y fechas desde/hasta.</li>
+     <li>Confirmar qué productos cuentan como piezas de sushi y probar cuándo aparece el aviso del mínimo.</li>
+     <li>Verificar que el alias publicado sea el vigente: <strong>elviejobodegonsanra</strong>.</li>
+    </ul>
+   </article>
+   <article class="next-card dark">
+    <h3>Acciones de NeuroTech</h3>
+    <ul>
+     <li>Revisar conversaciones, respuestas y derivaciones para detectar nuevos casos de excepción.</li>
+     <li>Validar el circuito de reservas, el mínimo de sushi y los pedidos por web.</li>
+     <li>Controlar integraciones y reglas de cobro sobre operaciones reales.</li>
+     <li>Iniciar un tablero de medición mensual para pedidos, pagos, derivaciones, errores y consumo de IA.</li>
+    </ul>
+   </article>
+  </div>
+  <div class="closing">
+   <div><h3>La próxima etapa es medir el impacto.</h3><p>La base operativa ya tiene ajustes implementados. El siguiente paso es comprobar qué cambia en la experiencia, el trabajo del equipo y los resultados del restaurante.</p></div>
+   <a class="btn btn-lime" href="#resumen">Volver al resumen ↑</a>
   </div>
  </div>
 </section>
 </main>
-<footer><b>NEUROTECH SOLUCIONES</b><span>Accioná con inteligencia.</span>El Viejo Bodegón · Informe de evolución tecnológica · Octubre 2026</footer>
+<footer class="footer">
+ <img src="data:image/webp;base64,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" alt="NeuroTech Soluciones">
+ <p>El Viejo Bodegón · Informe ejecutivo de evolución tecnológica · 01 al 30 de octubre de 2026</p>
+</footer>
+<nav class="mobile-nav" aria-label="Navegación inferior">
+ <a href="#resumen" class="active"><i>01</i>RESUMEN</a>
+ <a href="#impacto"><i>02</i>MEJORAS</a>
+ <a href="#evolucion"><i>03</i>HISTORIA</a>
+ <a href="#indicadores"><i>04</i>PRÓXIMOS</a>
+</nav>
+<script>
+(function(){
+ const bar=document.getElementById('progressBar');
+ const nav=[...document.querySelectorAll('.mobile-nav a')];
+ const targets=['resumen','impacto','evolucion','indicadores'].map(id=>document.getElementById(id)).filter(Boolean);
+ function progress(){
+  const doc=document.documentElement;
+  const max=doc.scrollHeight-window.innerHeight;
+  const value=max>0?(window.scrollY/max)*100:0;
+  if(bar)bar.style.width=value+'%';
+ }
+ window.addEventListener('scroll',progress,{passive:true});
+ progress();
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{
+    if(entry.isIntersecting){
+     nav.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));
+    }
+   });
+  },{rootMargin:'-25% 0px -55% 0px'});
+  targets.forEach(target=>observer.observe(target));
+ }
+})();
+</script>
 </body>
 </html>
