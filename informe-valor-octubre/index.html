@@ -73,6 +73,7 @@ button{font:inherit}
 .chapter-image{position:relative;overflow:hidden;background:#15201d;min-height:410px}
 .chapter-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .chapter-image:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.45))}
+.feature-symbol{position:absolute;z-index:3;right:14px;bottom:14px;width:86px;height:86px;object-fit:contain;mix-blend-mode:screen;opacity:.94;pointer-events:none}
 .chapter-index{position:absolute;z-index:2;top:25px;left:26px;font-family:var(--head);font-size:12px;font-weight:800;letter-spacing:.13em}
 .chapter-tag{position:absolute;z-index:2;bottom:22px;left:25px;background:rgba(6,12,12,.79);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:9px 13px;font-size:10px;font-weight:800;letter-spacing:.1em;backdrop-filter:blur(10px)}
 .chapter-content{padding:42px 43px;align-self:center}
@@ -116,7 +117,7 @@ details[open] .toggle{transform:rotate(45deg);background:var(--lime);color:#0d17
 .note-box{padding:31px 34px;background:#17211e;border:1px solid var(--line);border-radius:24px;margin-top:37px;display:grid;grid-template-columns:1fr 2fr;gap:25px}
 .note-box strong{font-family:var(--head);font-size:18px;letter-spacing:-.04em}
 .note-box p{margin:0;color:#b7c5bc;font-size:14px;line-height:1.75}
-.closing{padding:85px 0 95px;background:radial-gradient(ellipse at 50% 100%,rgba(32,90,63,.18),transparent 60%),#0b1110;text-align:center;border-top:1px solid var(--line)}
+.closing{padding:85px 0 95px;background:linear-gradient(180deg,rgba(8,14,12,.90),rgba(8,14,12,.92)),url("assets/foto-mesa.webp") center/cover;text-align:center;border-top:1px solid var(--line)}
 .closing h2{font-family:var(--head);font-size:clamp(34px,5vw,61px);line-height:1.14;letter-spacing:-.06em;font-weight:600;max-width:840px;margin:14px auto}
 .closing h2 em{font-family:var(--serif);font-weight:400;color:var(--lime)}
 .closing p{color:#b0bfb6;font-size:15px;max-width:640px;margin:20px auto 0}
@@ -238,7 +239,7 @@ html{scroll-padding-top:76px}
 </div>
 <div class="hero-visual" aria-label="Representación del agente de atención y pedidos del restaurante">
 <div class="hero-orbit" aria-hidden="true"></div>
-<div class="visual-photo"><img src="../informe-octubre/assets/hamburguesa.webp" width="512" height="512" alt="Hamburguesa del universo gastronómico de El Viejo Bodegón"></div>
+<div class="visual-photo"><img src="assets/foto-hamburguesa.webp" width="512" height="512" alt="Hamburguesa del universo gastronómico de El Viejo Bodegón"></div>
 <div class="agent-card">
 <div class="agent-top"><span>EL VIEJO BODEGÓN · AGENTE IA</span><span>EN OPERACIÓN</span></div>
 <h2>Una consulta.<br>Una respuesta útil.</h2>
@@ -260,19 +261,19 @@ html{scroll-padding-top:76px}
 <div class="shell">
 <div class="section-intro"><div class="eyebrow">01 / El valor para el negocio</div><h2>No se trata de responder mensajes. <em>Se trata de hacer funcionar mejor el restaurante.</em></h2><p>El agente acompaña el trabajo diario en tres frentes. Cada mejora busca reducir pasos innecesarios, cuidar la experiencia del cliente y ayudar al equipo a concentrarse donde más valor aporta.</p></div>
 <article class="chapter" id="atencion">
-<div class="chapter-image"><img src="../informe-octubre/assets/atencion.webp" width="640" height="800" loading="lazy" alt="Colaboradora del restaurante utilizando su celular para gestionar la atención"><span class="chapter-index">PANEL 01 / 03</span><span class="chapter-tag">ATENCIÓN INTELIGENTE</span></div>
+<div class="chapter-image"><img src="assets/foto-atencion.webp" width="640" height="800" loading="lazy" alt="Colaboradora del restaurante utilizando su celular para gestionar la atención"><span class="chapter-index">PANEL 01 / 03</span><span class="chapter-tag">ATENCIÓN INTELIGENTE</span></div>
 <div class="chapter-content"><div class="eyebrow">Menos carga operativa</div><h3>Más consultas atendidas. Menos carga para tu equipo.</h3><p>El agente recibe mensajes y audios, interpreta lo que necesita cada cliente y responde sin interrumpir a una persona que ya está atendiendo la conversación.</p>
 <ul class="benefits"><li>Reduce la repetición de respuestas habituales y el seguimiento manual.</li><li>Reconoce cuándo debe detenerse y dejar intervenir al personal.</li><li>Permite dedicar más atención a caja, salón y clientes presenciales.</li></ul>
 <div class="outcome">La IA atiende. Tu equipo se concentra en el negocio.</div></div>
 </article>
 <article class="chapter reverse" id="pedidos">
-<div class="chapter-image"><img src="../informe-octubre/assets/hamburguesa.webp" width="512" height="512" loading="lazy" alt="Hamburguesa gastronómica del restaurante"><span class="chapter-index">PANEL 02 / 03</span><span class="chapter-tag">PEDIDOS Y PAGOS</span></div>
+<div class="chapter-image"><img src="assets/foto-hamburguesa.webp" width="512" height="512" loading="lazy" alt="Hamburguesa gastronómica del restaurante"><img class="feature-symbol" src="assets/icono-seguridad.webp" width="86" height="86" loading="lazy" alt="" aria-hidden="true"><span class="chapter-index">PANEL 02 / 03</span><span class="chapter-tag">PEDIDOS Y PAGOS</span></div>
 <div class="chapter-content"><div class="eyebrow">Menos pasos, más control</div><h3>Pedidos y pagos con más control.</h3><p>El agente orienta las compras hacia el canal adecuado, aplica las condiciones comerciales y ayuda a revisar comprobantes antes de que el equipo confirme una operación.</p>
 <ul class="benefits"><li>Guía pedidos hacia la web y controla condiciones como el mínimo de sushi.</li><li>Revisa datos de comprobantes y advierte posibles duplicados o inconsistencias.</li><li>Aplica reglas de promociones, descuentos y recordatorios de pago.</li></ul>
 <div class="outcome">Menos verificaciones manuales. Más claridad en cada operación.</div></div>
 </article>
 <article class="chapter" id="conocimiento">
-<div class="chapter-image"><img src="../informe-octubre/assets/sushi.webp" width="512" height="512" loading="lazy" alt="Sushi gourmet, parte de la propuesta gastronómica"><span class="chapter-index">PANEL 03 / 03</span><span class="chapter-tag">CONOCIMIENTO DEL NEGOCIO</span></div>
+<div class="chapter-image"><img src="assets/foto-sushi.webp" width="512" height="512" loading="lazy" alt="Sushi gourmet, parte de la propuesta gastronómica"><img class="feature-symbol" src="assets/icono-gastronomia.webp" width="86" height="86" loading="lazy" alt="" aria-hidden="true"><span class="chapter-index">PANEL 03 / 03</span><span class="chapter-tag">CONOCIMIENTO DEL NEGOCIO</span></div>
 <div class="chapter-content"><div class="eyebrow">Una IA adaptada a tu carta</div><h3>Un agente que conoce tu negocio y entiende lo que vendés.</h3><p>Reconoce productos, combos, horarios, promociones y condiciones del restaurante. Puede orientar la elección, sugerir complementos y dirigir al cliente hacia la compra.</p>
 <ul class="benefits"><li>Distingue qué carta solicita el cliente, incluso fuera del horario habitual.</li><li>Reconoce promociones próximas y consulta al equipo cuando falta información.</li><li>Responde con instrucciones más claras, evitando contradicciones y repeticiones.</li></ul>
 <div class="outcome">Una mejor conversación puede abrir una nueva venta.</div></div>
